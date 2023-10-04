@@ -1,9 +1,14 @@
-import Image from 'next/image';
+import localFont from '@next/font/local';
+import Home from './home/page';
 
-export default function Home() {
+const myFont = localFont({
+	src: '../app/assets/bogart/Bogart-Regular-trial.ttf',
+});
+
+export default function page() {
 	return (
-		<main className="flex min-h-screen flex-col items-center justify-between p-24">
-			<div>Hey Glass!</div>
+		<main style={myFont.style}>
+			<Home />
 		</main>
 	);
 }
