@@ -231,9 +231,9 @@ const Page = () => {
 				className="bg-tertiaryWhite mt-60 lg:mt-28 w-full py-4 lg:p-20 rounded-[50px]"
 			>
 				<div className="w-11/12 mx-auto">
-					<p className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
 						We can take you from this...
-					</p>
+					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
 						<Image
 							placeholder="blur"
@@ -247,9 +247,9 @@ const Page = () => {
 						alt="Arrow"
 						className="ml-[35%] lg:ml-[45%] max-w-[69px] lg:max-w-[109px] my-16"
 					/>
-					<p className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
 						To this!
-					</p>
+					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
 						<Image
 							src={After}
@@ -357,7 +357,6 @@ const Page = () => {
 					goNext={nextTestimonialHandler}
 				/>
 			</div>
-			<Footer />
 		</>
 	);
 };

@@ -14,7 +14,7 @@ const bogart = localFont({
 });
 
 const Products = ({ products, right }) => {
-	console.log(products);
+	const [isLoading, setIsLoading] = useState(true);
 
 	const initialActiveButton = products.length > 0 ? products[0]?.id : null;
 	const [activeButton, setActiveButton] = useState(initialActiveButton);
@@ -36,10 +36,13 @@ const Products = ({ products, right }) => {
 				} max-h-[1060px] xl:w-3/4 duration-250`}
 			>
 				<Image
-					className="rounded-[50px] max-h-[1060px] shadow-xl "
+					className={`rounded-[50px] max-h-[1060px] shadow-xl ${
+						isLoading ? 'grayscale blur-2xl' : 'grayscale-0 blur-0'
+					}`}
 					alt={item.name}
 					src={item.img}
 					placeholder="blur"
+					onLoadingComplete={() => setIsLoading(false)}
 				/>
 			</div>
 			<div className="xl:w-1/4 px-10 relative">
