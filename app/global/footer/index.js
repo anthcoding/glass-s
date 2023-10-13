@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import localFont from '@next/font/local';
 import { usePathname } from 'next/navigation';
 
@@ -8,6 +8,7 @@ import BlueGradient from '../../assets/images/gradientBlue.jpg';
 import WhiteGradient from '../../assets/images/gradientCream.jpg';
 import Image from 'next/image';
 import Link from 'next/link';
+import ContactContext from '../../store/contact-context';
 
 const acorn = localFont({
 	src: '../../assets/acorn/Acorn-Light.woff2',
@@ -35,6 +36,8 @@ const Footer = () => {
 	var currentTime = new Date();
 	const currentRoute = usePathname();
 
+	const { handleModal } = useContext(ContactContext);
+
 	useEffect(() => {
 		if (currentRoute === '/home' || '/gallery' || '') {
 			setThemeColor('dark');
@@ -46,7 +49,7 @@ const Footer = () => {
 	}, [currentRoute]);
 
 	return (
-		<div className="w-full h-[100vh] relative" style={bogart.style}>
+		<div className="w-full h-full relative" style={bogart.style}>
 			<Image
 				quality={100}
 				src={BlueGradient}
@@ -59,12 +62,8 @@ const Footer = () => {
 					zIndex: '-1',
 				}}
 			/>
-			<div className="mb-30 mx-auto flex flex-col items-center justify-center">
-				<h1
-					className={`${
-						themeColor === 'light' ? 'text-dark' : 'text-white'
-					} text-xl text-center leading-[45px] mb-12 mt-[200px]`}
-				>
+			<div className="mb-30 mx-auto flex flex-col items-center justify-center text-white">
+				<h1 className="text-xl text-center leading-[45px] mb-12 mt-[200px]">
 					Available in South Florida
 					<br />
 					<span className=" text-secondaryLightWhite ">
@@ -76,6 +75,7 @@ const Footer = () => {
 					Not in South Florida?
 				</p>
 				<button
+					onClick={handleModal}
 					style={bogart.style}
 					className="bg-blue rounded-[62px] text-white text-sm px-5 py-2"
 				>
@@ -117,12 +117,15 @@ const Footer = () => {
 					<h1 className="col-span-2 text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
 						Any questions?
 					</h1>
-					<button className="xl:ml-[15%] bg-[#ffffff26]  text-white w-[85%] py-4 rounded-lg hover:bg-lightDark border-[1px] border-[#ffffff26] duration-200">
+					<button
+						onClick={handleModal}
+						className="xl:ml-[15%] bg-[#ffffff26]  text-white w-[85%] py-4 rounded-lg hover:bg-lightDark border-[1px] border-[#ffffff26] duration-200"
+					>
 						Contact us
 					</button>
 				</div>
 			</div>
-			<div className="w-7/12 mx-auto flex items-center justify-center mt-16">
+			<div className="w-7/12 mx-auto flex items-center justify-center mt-16 pb-9">
 				<p className="text-smallMobile lg:text-small text-secondaryLightWhite  bottom-3 mr-2">
 					©<span style={acorn.style}>{currentTime.getFullYear()} </span>Glass
 					Stock Solutions.{' '}

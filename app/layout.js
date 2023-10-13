@@ -2,6 +2,8 @@ import './globals.css';
 import { Inter } from 'next/font/google';
 import NavBar from './global/nav-bar/index';
 import Footer from './global/footer';
+import ContactUs from './components/contact-us/ContactUs';
+import { ModalProvider } from './store/contact-context';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -13,11 +15,17 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={inter.className} suppressHydrationWarning={true}>
-				<NavBar />
-				{children}
-				<Footer />
-			</body>
+			<ModalProvider>
+				<body
+					className={`${inter.className} relative`}
+					suppressHydrationWarning={true}
+				>
+					<NavBar />
+					{children}
+					<Footer />
+					<ContactUs />
+				</body>
+			</ModalProvider>
 		</html>
 	);
 }
