@@ -1,8 +1,8 @@
 import React from 'react';
 import localFont from '@next/font/local';
 
-const acorn = localFont({
-	src: '../assets/acorn/Acorn-Regular.woff2',
+const acornLight = localFont({
+	src: '../assets/acorn/Acorn-Light.eot',
 });
 
 const bogart = localFont({
@@ -12,9 +12,12 @@ const bogart = localFont({
 const page = () => {
 	return (
 		<div className="bg-cream w-full">
-			<div className="w-full px-12 lg:w-5/12 mx-auto py-32" style={acorn.style}>
+			<div
+				className="w-full px-12 lg:w-7/12 mx-auto py-32"
+				style={acornLight.style}
+			>
 				<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark mt-12">
-					Our <span className="text-dark">porpouse</span>
+					Our <span className="text-dark">purpose</span>
 				</h1>
 				<p
 					className="text-secondaryDark text-center text-baseMobile lg:text-base leading-[30px] mt-20 mb-60"

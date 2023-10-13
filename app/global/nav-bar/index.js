@@ -2,8 +2,9 @@
 
 import Link from 'next/link';
 import './nav-bar.css';
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import localFont from '@next/font/local';
+import ContactContext from '../../store/contact-context';
 
 const bogart = localFont({
 	src: '../../assets/bogart/Bogart-Light-trial.ttf',
@@ -18,6 +19,7 @@ const NavLinks = [
 
 const NavBar = () => {
 	const [isChecked, setIsChecked] = useState(false);
+	const { handleModal } = useContext(ContactContext);
 
 	const handleCheckboxChange = () => {
 		setIsChecked(!isChecked); // Toggle the checked state
@@ -50,7 +52,10 @@ const NavBar = () => {
 						</ul>
 					</div>
 					<div className="ml-auto md:ml-0">
-						<button className="bg-blue rounded-[62px] text-white text-sm px-5 py-2">
+						<button
+							onClick={handleModal}
+							className="bg-blue rounded-[62px] text-white text-sm px-5 py-2"
+						>
 							Contact us
 						</button>
 					</div>
