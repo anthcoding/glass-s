@@ -36,7 +36,9 @@ const Testimonial = ({ data, goNext, goPrev }) => {
 							{data.star}
 							{data.star}
 						</span>
-						<p className="text-secondaryDark">{data.date}</p>
+						<p className="text-secondaryDark text-smMobile md:text-sm">
+							{data.date}
+						</p>
 					</div>
 				</div>
 			</div>
@@ -45,14 +47,23 @@ const Testimonial = ({ data, goNext, goPrev }) => {
 				<h1 className="text-center text-baseMobile lg:text-base text-secondaryDark leading-[19px] lg:leading-[35px]">
 					{data.comment}
 				</h1>
-				<IoIosArrowDropleftCircle
-					onClick={goPrev}
-					className="text-base xl:text-lg text-secondaryLightDark absolute top-[60%] -left-[28px] xl:left-[18%] cursor-pointer"
-				/>
-				<IoIosArrowDroprightCircle
-					onClick={goNext}
-					className="text-base xltext-lg text-secondaryLightDark absolute top-[60%] -right-[28px] xl:right-[18%] cursor-pointer"
-				/>
+				<div className="flex mx-auto w-[70px] md:w-[100px] justify-between mt-4">
+					<div>
+						{' '}
+						<IoIosArrowDropleftCircle
+							onClick={goPrev}
+							className="text-base xl:text-lg text-secondaryLightDark cursor-pointer"
+						/>
+					</div>
+					<div>
+						{' '}
+						<IoIosArrowDroprightCircle
+							onClick={goNext}
+							className="text-base xl:text-lg text-secondaryLightDark cursor-pointer"
+						/>
+					</div>
+				</div>
+
 				{/* <button className="rounded-[52px]"></button>
 				<button className="rounded-[52px]"></button> */}
 			</div>

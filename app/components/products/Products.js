@@ -25,7 +25,7 @@ const Products = ({ products, right }) => {
 
 	return (
 		<div
-			className="xl:flex w-10/12 mx-auto mt-5 mb-8 xl:mt-20 xl:mb-80 "
+			className="xl:flex w-10/12 mx-auto mb-8 xl:mt-20 xl:mb-80 "
 			style={bogart.style}
 		>
 			<div

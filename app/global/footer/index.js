@@ -53,7 +53,6 @@ const Footer = () => {
 				quality={100}
 				src={BlueGradient}
 				alt="Blue gradient"
-				placeholder="blur"
 				sizes="100vw"
 				fill
 				style={{
@@ -61,8 +60,8 @@ const Footer = () => {
 					zIndex: '-1',
 				}}
 			/>
-			<div className="mb-30 mx-auto flex flex-col items-center justify-center text-white">
-				<h1 className="text-xl text-center leading-[45px] mb-12 mt-[200px]">
+			<div className="xl:mb-30 mx-auto flex flex-col items-center justify-center text-white">
+				<h1 className="text-xlMobile lg:text-xl text-center leading-[45px] xl:mb-12 mt-[200px]">
 					Available in South Florida
 					<br />
 					<span className=" text-secondaryLightWhite ">
@@ -70,7 +69,7 @@ const Footer = () => {
 					</span>
 				</h1>
 
-				<p className="text-smallMobile lg:text-small text-secondaryLightWhite  mb-2">
+				<p className="text-smMobile lg:text-small text-secondaryLightWhite mt-5 xl:mt-0 mb-2">
 					Not in South Florida?
 				</p>
 				<button
@@ -82,14 +81,14 @@ const Footer = () => {
 				</button>
 			</div>
 
-			<div className="grid grid-cols-2 grid-row-3 xl:grid-cols-3 lg:w-9/12 xl:w-9/12 mx-auto mt-[20%]">
+			<div className="grid grid-cols-2 grid-row-3 xl:grid-cols-3 lg:w-9/12 xl:w-9/12 mx-auto mt-[20%] ">
 				<div className="flex flex-col">
 					{NavLinks.map((link) => {
 						return (
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
+								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
@@ -97,7 +96,7 @@ const Footer = () => {
 					})}
 				</div>
 				<div className="flex flex-col">
-					<h1 className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[45px] lg:pl-[35%] ">
+					<h1 className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[45px] lg:pl-[35%] ">
 						Social
 					</h1>
 					{SocialLinks.map((link) => {
@@ -105,20 +104,20 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
+								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
 						);
 					})}
 				</div>
-				<div className="col-span-2 flex flex-col justify-center items-center">
-					<h1 className=" text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
+				<div className="col-span-2 xl:col-auto flex flex-col justify-center items-center">
+					<h1 className="mt-10 xl:mt-0 text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
 						Any questions?
 					</h1>
 					<button
 						onClick={handleModal}
-						className="xl:ml-[15%] bg-[#ffffff26]  text-white w-[85%] py-4 rounded-lg hover:bg-lightDark border-[1px] border-[#ffffff26] duration-200"
+						className="xl:ml-[15%] max-w-[350px] bg-[#ffffff26]  text-white w-[85%] py-4 rounded-lg hover:bg-lightDark border-[1px] border-[#ffffff26] duration-200"
 					>
 						Contact us
 					</button>

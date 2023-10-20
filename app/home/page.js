@@ -281,7 +281,7 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<div style={bogart.style} className="w-8/12 mx-auto py-80">
+			<div style={bogart.style} className="w-8/12 mx-auto pt-32 lg:py-80">
 				<div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
 					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col gap-5 lg:gap-0 lg:flex-row justify-center items-center gradient-bg-first px-3 py-5 lg:px-11">
 						<div className="w-full lg:w-2/3 ">
@@ -355,6 +355,14 @@ const Page = () => {
 				</div>
 			</div>
 			<div className="bg-cream pt-32 pb-4">
+				<div className="w-10/12 mx-auto">
+					<p
+						style={acornLight.style}
+						className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center lg:text-start text-dark mt-12 mb-20 lg:mb-40 "
+					>
+						Take a look <br /> at what we do
+					</p>
+				</div>
 				<Products products={SECOND_PRODUCTS_DATA} />
 				<Products products={FIRST_PRODUCTS_DATA} right />
 			</div>
@@ -362,7 +370,7 @@ const Page = () => {
 			<div className="w-10/12 lg:w-9/12 mx-auto my-40 xl:my-80">
 				<p
 					style={acornLight.style}
-					className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-40"
+					className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-20 lg:mb-40"
 				>
 					Check what our customers say about us
 				</p>
