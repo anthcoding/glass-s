@@ -42,16 +42,16 @@ const Testimonial = ({ data, goNext, goPrev }) => {
 			</div>
 
 			<div className=" xl:w-6/12 mx-auto mt-10 transition-all duration-450 animate-[fadeIn_1s_ease-in-out]">
-				<h1 className="text-center text-base text-secondaryDark leading-[35px]">
+				<h1 className="text-center text-baseMobile lg:text-base text-secondaryDark leading-[19px] lg:leading-[35px]">
 					{data.comment}
 				</h1>
 				<IoIosArrowDropleftCircle
 					onClick={goPrev}
-					className="text-lg text-secondaryLightDark absolute top-[60%] left-[18%] cursor-pointer"
+					className="text-base xl:text-lg text-secondaryLightDark absolute top-[60%] -left-[28px] xl:left-[18%] cursor-pointer"
 				/>
 				<IoIosArrowDroprightCircle
 					onClick={goNext}
-					className="text-lg text-secondaryLightDark absolute top-[60%] right-[18%] cursor-pointer"
+					className="text-base xltext-lg text-secondaryLightDark absolute top-[60%] -right-[28px] xl:right-[18%] cursor-pointer"
 				/>
 				{/* <button className="rounded-[52px]"></button>
 				<button className="rounded-[52px]"></button> */}

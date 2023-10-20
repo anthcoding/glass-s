@@ -48,7 +48,10 @@ const Modal = ({ handleClick }) => {
 
 	return (
 		<>
-			<div className="absolute inset-0 bg-secondaryDark bg-opacity-20 transition-all animate-[fadeIn_.1s_ease-in-out]"></div>
+			<div
+				className="absolute inset-0 bg-secondaryDark bg-opacity-20 transition-all animate-[fadeIn_.1s_ease-in-out]"
+				onClick={handleClick}
+			></div>
 			<div className="fixed w-full md:w-[580px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg bg-white rounded-[51px] p-16 z-[1000] transition-all animate-[fadeIn_.2s_ease-in-out]">
 				<button
 					onClick={handleClick}
@@ -70,7 +73,6 @@ const Modal = ({ handleClick }) => {
 						<h1 className="text-medium text-start mb-2">
 							Enter your contact information
 						</h1>
-						{/* register your input into the hook by invoking the "register" function */}
 						<div className="w-full flex justify-between mb-2">
 							<div className="w-[48%]">
 								<input

@@ -42,7 +42,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 1,
 		name: 'Frameless Shower Door',
 		buttonName: 'F-shower door',
-		description: 'SWING DOOR + FIXED PANEL',
+		description: 'Swing door + fixed panel',
 		price: '$850',
 		img: FramelessDoor,
 	},
@@ -50,7 +50,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 2,
 		name: 'Fixed Panel',
 		buttonName: 'Fixed pannel',
-		description: 'FIXED PANEL',
+		description: 'Fixed panel',
 		price: '$500',
 		img: FixedPanel,
 	},
@@ -58,7 +58,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 3,
 		name: 'Frameless Shower Enclosure',
 		buttonName: 'F-shower encl',
-		description: 'FIXED PANELS + DOOR',
+		description: 'Fixed panels + door',
 		price: '$1200',
 		img: FramelessDoorEnclosure,
 	},
@@ -66,7 +66,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 4,
 		name: 'Frameless Sliding Shower Door',
 		buttonName: 'FS-shower door',
-		description: 'FIXED PANEL + DOOR + FOUR ROLLING SYSTEM TUBULAR',
+		description: 'Fixed panel + door + four rolling system tubular',
 		price: '$1250',
 		img: SlidingDoor,
 	},
@@ -77,7 +77,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 1,
 		name: 'Glass Railing',
 		buttonName: 'G-railing',
-		description: 'GLASS RAILING WITH STANDOFF',
+		description: 'Glass railing with standoff',
 		price: '$3500',
 		img: StairRailing,
 	},
@@ -85,7 +85,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 2,
 		name: 'Interior Pivot Door',
 		buttonName: 'I-pivot-door',
-		description: '	INTERIOR DOOR (FROSTED GLASS)',
+		description: 'Interior door (frosted glass)',
 		price: '$900',
 		img: PivotDoor,
 	},
@@ -93,7 +93,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 3,
 		name: 'Mirror',
 		buttonName: 'Mirror',
-		description: 'MIRROR ONE-QUARTER',
+		description: 'Mirror one-quarter',
 		price: '$300',
 		img: Mirror,
 	},
@@ -101,7 +101,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 4,
 		name: 'Pivor Heavy Duty Glass Enclosure',
 		buttonName: 'P-HD-glass',
-		description: 'ONE-HALF CLEAR GLASS WITH HYDRAULIC HINGES',
+		description: 'One-half clear glass with hydraulic hinges',
 		price: '$2189',
 		img: PivotDoorHd,
 	},
@@ -359,10 +359,10 @@ const Page = () => {
 				<Products products={FIRST_PRODUCTS_DATA} right />
 			</div>
 
-			<div className="w-9/12 mx-auto my-80">
+			<div className="w-10/12 lg:w-9/12 mx-auto my-40 xl:my-80">
 				<p
 					style={acornLight.style}
-					className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-40"
+					className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-40"
 				>
 					Check what our customers say about us
 				</p>
