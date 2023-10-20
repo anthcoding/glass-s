@@ -4,8 +4,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import localFont from '@next/font/local';
 import { usePathname } from 'next/navigation';
 
-import BlueGradient from '../../assets/images/gradientBlue.jpg';
-import WhiteGradient from '../../assets/images/gradientCream.jpg';
+import BlueGradient from '../../assets/images/gradientBlue.JPG';
 import Image from 'next/image';
 import Link from 'next/link';
 import ContactContext from '../../store/contact-context';
