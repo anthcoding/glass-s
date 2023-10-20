@@ -49,7 +49,7 @@ const Footer = () => {
 	}, [currentRoute]);
 
 	return (
-		<div className="w-full h-full relative" style={bogart.style}>
+		<div className="p-2 w-full h-full relative" style={bogart.style}>
 			<Image
 				quality={100}
 				src={BlueGradient}
@@ -90,7 +90,7 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-xl text-white leading-[45px] pl-[50%] hover:text-secondaryLightWhite  duration-250"
+								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
@@ -98,7 +98,7 @@ const Footer = () => {
 					})}
 				</div>
 				<div className="flex flex-col">
-					<h1 className="text-xl text-secondaryLightWhite  leading-[45px] pl-[35%] ">
+					<h1 className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[45px] lg:pl-[35%] ">
 						Social
 					</h1>
 					{SocialLinks.map((link) => {
@@ -106,15 +106,15 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-xl text-white leading-[45px] pl-[35%] hover:text-secondaryLightWhite  duration-250"
+								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[45px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
 						);
 					})}
 				</div>
-				<div className="">
-					<h1 className="col-span-2 text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
+				<div className="col-span-2 flex flex-col justify-center items-center">
+					<h1 className=" text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
 						Any questions?
 					</h1>
 					<button
@@ -125,19 +125,19 @@ const Footer = () => {
 					</button>
 				</div>
 			</div>
-			<div className="w-7/12 mx-auto flex items-center justify-center mt-16 pb-9">
-				<p className="text-smallMobile lg:text-small text-secondaryLightWhite  bottom-3 mr-2">
+			<div className="lg:w-7/12 mx-auto flex items-center justify-center mt-16 pb-9">
+				<p className="text-smMobile lg:text-smallMobile lg:text-small text-secondaryLightWhite  bottom-3 mr-2">
 					©<span style={acorn.style}>{currentTime.getFullYear()} </span>Glass
 					Stock Solutions.{' '}
 				</p>
-				<span className="text-smallMobile lg:text-small text-white mr-2">
+				<span className="text-smMobile lg:text-smallMobile lg:text-small text-white mr-2">
 					{' '}
 					Designed and developed by:
 				</span>
 				<Link
 					target="_blank"
 					href="https://www.anthl.xyz/"
-					className="text-blue text-smallMobile lg:text-small hover:underline duration-250"
+					className="text-blue text-smMobile lg:text-smallMobile lg:text-small hover:underline duration-250"
 				>
 					anth
 				</Link>

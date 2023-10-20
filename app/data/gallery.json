@@ -1,0 +1,21 @@
+{
+  "data": [
+    { "url": "Mirror", "alt": "Picture of a mirror" },
+    { "url": "Pivot1", "alt": "Picture of a frameless office door" },
+    { "url": "Pivot2", "alt": "Picture of a frameless office door" },
+    { "url": "Shower4", "alt": "Picture of a frameless shower door" },
+    { "url": "Shower5", "alt": "Picture of a frameless shower door" }
+  ],
+  "data2": [
+    { "url": "Shower3", "alt": "Picture of a frameless shower door" },
+    { "url": "Shower", "alt": "Picture of a frameless shower door" },
+    { "url": "Shower1", "alt": "Picture of a frameless shower door" },
+    { "url": "Shower2", "alt": "Picture of a frameless shower door" }
+  ],
+  "data3": [
+    { "url": "Shower6", "alt": "Picture of a frameless shower door" },
+    { "url": "Shower7", "alt": "Picture of a frameless shower door" },
+    { "url": "SlidingDoor", "alt": "Picture of a sliding door" },
+    { "url": "Stair1", "alt": "Picture of a stair" }
+  ]
+}

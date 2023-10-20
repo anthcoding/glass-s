@@ -37,7 +37,7 @@ module.exports = {
 			lg: '42px',
 			xl: '48px',
 			xxl: ' 6.67vw',
-			smMobile: '8px',
+			smMobile: '12px',
 			mediumMobile: '15px',
 			baseMobile: '20px',
 			lgMobile: '24px',
