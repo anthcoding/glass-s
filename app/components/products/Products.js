@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import localFont from '@next/font/local';
 import GroupButtons from './GroupButtons';
 
@@ -14,47 +14,42 @@ const bogart = localFont({
 });
 
 const Products = ({ products, right }) => {
-	const [isLoading, setIsLoading] = useState(true);
-
-	const initialActiveButton = products.length > 0 ? products[0]?.id : null;
+	const initialActiveButton = products.length > 0 ? products[0] : null;
 	const [activeButton, setActiveButton] = useState(initialActiveButton);
 
-	const handleButtonClick = (buttonId) => {
-		setActiveButton(buttonId);
-	};
+	const myImage = useRef();
 
-	const item = products.find((product) => product.id === activeButton);
+	const handleButtonClick = (value) => {
+		setActiveButton(value);
+	};
 
 	return (
 		<div
-			className="xl:flex w-10/12 mx-auto mt-5 mb-8 xl:mt-20 xl:mb-80"
+			className="xl:flex w-10/12 mx-auto mt-5 mb-8 xl:mt-20 xl:mb-80 "
 			style={bogart.style}
 		>
 			<div
-				className={`${
-					right ? 'xl:order-last' : ''
-				} max-h-[1060px] xl:w-3/4 duration-250`}
+				className={`${right ? 'xl:order-last' : ''} max-h-[1060px] xl:w-3/4`}
 			>
 				<Image
-					className={`rounded-[50px] max-h-[1060px] shadow-xl ${
-						isLoading ? 'grayscale blur-2xl' : 'grayscale-0 blur-0'
-					}`}
-					alt={item.name}
-					src={item.img}
+					className="rounded-[50px] max-h-[1060px] shadow-xl transition-all duration-250 focus:animate-[fadeIn_.5s_ease-in-out] "
+					alt={activeButton.name}
+					src={activeButton.img}
 					placeholder="blur"
-					onLoadingComplete={() => setIsLoading(false)}
+					ref={myImage}
 				/>
 			</div>
-			<div className="xl:w-1/4 px-10 relative">
+			<div className="mt-10 mb-20 xl:w-1/4 lg:px-5 relative">
 				<div className={`${right ? 'xl:absolute xl:bottom-0' : ''}`}>
 					<p className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-dark">
-						{item.name}
+						{activeButton.name}
 					</p>
 					<p className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark">
-						{item.description.toUpperCase()}
+						{activeButton.description}
 					</p>
 					<h1 className="text-smallMobile lg:text-small text-secondaryDark">
-						Starting at: <span style={acornLight.style}>{item.price}</span>
+						Starting at:{' '}
+						<span style={acornLight.style}>{activeButton.price}</span>
 					</h1>
 
 					<div className="xl:w-full mt-5">

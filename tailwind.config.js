@@ -25,6 +25,10 @@ module.exports = {
 			tertiaryDark: '#000000cc',
 			lightDark: '#00000014',
 			secondaryLightDark: '#00000038',
+			tertiaryLightDark: '#00000005',
+			tertiaryLighertDark: '#0000001a',
+			red: '#A73121',
+			whatsapp: '#25D366',
 		},
 		fontSize: {
 			sm: '15px',
@@ -32,8 +36,8 @@ module.exports = {
 			base: '30px',
 			lg: '42px',
 			xl: '48px',
-			xxl: '138px',
-			smMobile: '8px',
+			xxl: ' 6.67vw',
+			smMobile: '12px',
 			mediumMobile: '15px',
 			baseMobile: '20px',
 			lgMobile: '24px',
@@ -56,5 +60,5 @@ module.exports = {
 			},
 		},
 	},
-	plugins: [],
+	plugins: [require('@tailwindcss/aspect-ratio')],
 };

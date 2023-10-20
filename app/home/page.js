@@ -1,9 +1,10 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import localFont from '@next/font/local';
 import Link from 'next/link';
 import Image from 'next/image';
+import ContactContext from '../store/contact-context';
 
 import FlyingStar from '../assets/images/flyingStar.png';
 import Hero from '../assets/images/hero.png';
@@ -41,7 +42,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 1,
 		name: 'Frameless Shower Door',
 		buttonName: 'F-shower door',
-		description: 'SWING DOOR + FIXED PANEL',
+		description: 'Swing door + fixed panel',
 		price: '$850',
 		img: FramelessDoor,
 	},
@@ -49,7 +50,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 2,
 		name: 'Fixed Panel',
 		buttonName: 'Fixed pannel',
-		description: 'FIXED PANEL',
+		description: 'Fixed panel',
 		price: '$500',
 		img: FixedPanel,
 	},
@@ -57,7 +58,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 3,
 		name: 'Frameless Shower Enclosure',
 		buttonName: 'F-shower encl',
-		description: 'FIXED PANELS + DOOR',
+		description: 'Fixed panels + door',
 		price: '$1200',
 		img: FramelessDoorEnclosure,
 	},
@@ -65,7 +66,7 @@ const FIRST_PRODUCTS_DATA = [
 		id: 4,
 		name: 'Frameless Sliding Shower Door',
 		buttonName: 'FS-shower door',
-		description: 'FIXED PANEL + DOOR + FOUR ROLLING SYSTEM TUBULAR',
+		description: 'Fixed panel + door + four rolling system tubular',
 		price: '$1250',
 		img: SlidingDoor,
 	},
@@ -74,9 +75,9 @@ const FIRST_PRODUCTS_DATA = [
 const SECOND_PRODUCTS_DATA = [
 	{
 		id: 1,
-		name: 'Glas Railing',
+		name: 'Glass Railing',
 		buttonName: 'G-railing',
-		description: 'GLASS RAILING WITH STANDOFF',
+		description: 'Glass railing with standoff',
 		price: '$3500',
 		img: StairRailing,
 	},
@@ -84,7 +85,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 2,
 		name: 'Interior Pivot Door',
 		buttonName: 'I-pivot-door',
-		description: '	INTERIOR DOOR (FROSTED GLASS)',
+		description: 'Interior door (frosted glass)',
 		price: '$900',
 		img: PivotDoor,
 	},
@@ -92,7 +93,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 3,
 		name: 'Mirror',
 		buttonName: 'Mirror',
-		description: 'MIRROR ONE-QUARTER',
+		description: 'Mirror one-quarter',
 		price: '$300',
 		img: Mirror,
 	},
@@ -100,7 +101,7 @@ const SECOND_PRODUCTS_DATA = [
 		id: 4,
 		name: 'Pivor Heavy Duty Glass Enclosure',
 		buttonName: 'P-HD-glass',
-		description: 'ONE-HALF CLEAR GLASS WITH HYDRAULIC HINGES',
+		description: 'One-half clear glass with hydraulic hinges',
 		price: '$2189',
 		img: PivotDoorHd,
 	},
@@ -160,6 +161,8 @@ const bogartRegular = localFont({
 const Page = () => {
 	const [testimonialIndex, setTestimonialIndex] = useState(0);
 
+	const { handleModal } = useContext(ContactContext);
+
 	const prevTestimonialHandler = () => {
 		if (testimonialIndex === 0) {
 			setTestimonialIndex(TESTIMONIALS_DATA.length - 1);
@@ -183,7 +186,7 @@ const Page = () => {
 			<div className="pt-28  lg:pt-64 w-11/12 mx-auto h-fit lg:flex ">
 				<div className="lg:w-[65%] lg:shrink flex flex-col">
 					<div
-						style={acorn.style}
+						style={acornLight.style}
 						className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] h-fit"
 					>
 						Unlock elegance <br /> Through glass
@@ -201,7 +204,10 @@ const Page = () => {
 							<p className="text-smallMobile lg:text-small text-secondaryDark">
 								Available in South Florida.
 							</p>
-							<button className="lg:ml-3 text-blue flex lg:justify-center items-center z-[5px]">
+							<button
+								onClick={handleModal}
+								className="lg:ml-3 text-blue flex lg:justify-center items-center z-[5px] hover:tracking-tight transition-all duration-200"
+							>
 								Tell us where to go next <HiMiniArrowLongRight />
 							</button>
 						</div>
@@ -227,11 +233,11 @@ const Page = () => {
 				</div>
 			</div>
 			<div
-				style={acorn.style}
+				style={acornLight.style}
 				className="bg-tertiaryWhite mt-60 lg:mt-28 w-full py-4 lg:p-20 rounded-[50px]"
 			>
 				<div className="w-11/12 mx-auto">
-					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[90px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
 						We can take you from this...
 					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
@@ -247,14 +253,17 @@ const Page = () => {
 						alt="Arrow"
 						className="ml-[35%] lg:ml-[45%] max-w-[69px] lg:max-w-[109px] my-16"
 					/>
-					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1
+						className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12 "
+						style={acornLight.style}
+					>
 						To this!
 					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
 						<Image
 							src={After}
 							alt="After photo"
-							className="content-fit rounded-[50px]"
+							className="w-full rounded-[50px]"
 							placeholder="blur"
 						/>
 						<Image
@@ -274,19 +283,22 @@ const Page = () => {
 			</div>
 			<div style={bogart.style} className="w-8/12 mx-auto py-80">
 				<div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
-					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col gap-5 lg:gap-0 lg:flex-row justify-center items-center bg-tertiaryWhite px-3 py-5 lg:px-11">
+					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col gap-5 lg:gap-0 lg:flex-row justify-center items-center gradient-bg-first px-3 py-5 lg:px-11">
 						<div className="w-full lg:w-2/3 ">
 							<h1
-								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px]  pr-8"
+								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] mb-5 pr-8"
 								style={bogartRegular.style}
 							>
 								We have exceeded expectations for{' '}
 								<span style={acornLight.style}>200+</span> clients.
 							</h1>
-							<button className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark mt-5 leading-[25px]">
+							<Link
+								href={'/gallery'}
+								className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark leading-[25px] hover:tracking-tight hover:text-blue transition-all duration-200"
+							>
 								Come see our projects in our gallery{' '}
 								<HiMiniArrowLongRight className="inline" />
-							</button>
+							</Link>
 						</div>
 						<div className="w-1/3">
 							<Image src={GroupPeople} alt="GroupPeople" />
@@ -299,7 +311,10 @@ const Page = () => {
 						>
 							Hablamos español
 						</h1>
-						<button className="w-full items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryWhite mt-5 leading-[25px]">
+						<button
+							onClick={handleModal}
+							className="w-full items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryWhite mt-5 leading-[25px] hover:tracking-tight hover:text-cream transition-all duration-200"
+						>
 							Sientase libre de comunicarse <br /> con nosotros{' '}
 							<HiMiniArrowLongRight className="inline" />
 						</button>
@@ -323,7 +338,7 @@ const Page = () => {
 							<span style={acornLight.style}>15</span> minutes.
 						</h1>
 					</div>
-					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col justify-center items-center bg-tertiaryWhite px-3 py-5 lg:px-11">
+					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col justify-center items-center gradient-bg-second px-3 py-5 lg:px-11">
 						<h1
 							className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] "
 							style={bogartRegular.style}
@@ -340,14 +355,14 @@ const Page = () => {
 				</div>
 			</div>
 			<div className="bg-cream pt-32 pb-4">
-				<Products products={FIRST_PRODUCTS_DATA} />
-				<Products products={SECOND_PRODUCTS_DATA} right />
+				<Products products={SECOND_PRODUCTS_DATA} />
+				<Products products={FIRST_PRODUCTS_DATA} right />
 			</div>
 
-			<div className="w-9/12 mx-auto my-80">
+			<div className="w-10/12 lg:w-9/12 mx-auto my-40 xl:my-80">
 				<p
-					style={acorn.style}
-					className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-40"
+					style={acornLight.style}
+					className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-40"
 				>
 					Check what our customers say about us
 				</p>

@@ -1,8 +1,8 @@
 import React from 'react';
 import localFont from '@next/font/local';
 
-const acorn = localFont({
-	src: '../assets/acorn/Acorn-Regular.woff2',
+const acornLight = localFont({
+	src: '../assets/acorn/Acorn-Light.woff2',
 });
 
 const bogart = localFont({
@@ -11,12 +11,15 @@ const bogart = localFont({
 
 const Page = () => {
 	return (
-		<div className="w-full lg:w-8/12 py-32 px-12  mx-auto" style={acorn.style}>
+		<div
+			className="w-full lg:w-11/12 py-32 px-12  mx-auto"
+			style={acornLight.style}
+		>
 			<h1 className="xl:w-9/12 text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark pt-">
 				Frequently asked questions
 			</h1>
-			<div className="my-20 l¡g:w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-1/3 ml-20">
+			<div className="my-20 lg:w-9/12 mx-auto" style={bogart.style}>
+				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
 					Do we offer warranty?
 				</div>
 				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
@@ -25,7 +28,7 @@ const Page = () => {
 					warranty to provide you with peace of mind.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Hardware Warranty
 					</span>{' '}
 					<br />
@@ -38,7 +41,7 @@ const Page = () => {
 					conditions.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Installation Warranty
 					</span>{' '}
 					<br />
@@ -52,7 +55,7 @@ const Page = () => {
 				</div>
 			</div>
 			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-1/3 ml-20">
+				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
 					What area do we serve?
 				</div>
 				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
@@ -62,6 +65,7 @@ const Page = () => {
 					access to our exceptional glass and mirror products, as well as our
 					top-notch services.
 					<br />
+					<br />
 					For projects outside of this primary service area, we are open to
 					exploring possibilities based on the specific requirements and nature
 					of the project. Our commitment to our clients remains unwavering, and
@@ -70,11 +74,11 @@ const Page = () => {
 				</div>
 			</div>
 			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-2/5 ml-20">
+				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
 					How is the order process?
 				</div>
 				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						1:
 					</span>{' '}
 					Estimation and Precise Measurements We begin the order process by
@@ -83,7 +87,7 @@ const Page = () => {
 					mirror is customized to fit your exact specifications.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						2:
 					</span>{' '}
 					Order Placement Once you have approved the project and the estimate,
@@ -92,7 +96,7 @@ const Page = () => {
 					options to meet your specific needs.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						3:
 					</span>{' '}
 					Glass Production After the order is placed, we work with our trusted
@@ -101,7 +105,7 @@ const Page = () => {
 					satisfaction.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						4:
 					</span>{' '}
 					Installation On a scheduled date, our skilled installation team will
@@ -113,38 +117,38 @@ const Page = () => {
 				</div>
 			</div>
 			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-1/3 ml-20">
+				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
 					Payment methods
 				</div>
 				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						We offer a variety of convenient payment methods to accommodate your
 						preferences:
 					</span>{' '}
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Cash:
 					</span>{' '}
 					For those who prefer the simplicity of cash transactions, we gladly
 					accept cash payments.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Check:
 					</span>{' '}
 					You can also choose to pay by check, providing a traditional and
 					secure payment option.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Zelle:
 					</span>{' '}
 					We offer the convenience of Zelle for quick and hassle-free electronic
 					payments.
 					<br />
 					<br />
-					<span className="text-base" style={acorn.style}>
+					<span className="text-base" style={acornLight.style}>
 						Credit or Debit Card:
 					</span>{' '}
 					To ensure flexibility, we accept credit and debit card payments,
