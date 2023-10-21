@@ -59,13 +59,15 @@ const Modal = ({ handleClick }) => {
 				>
 					<VscClose size={30} />
 				</button>
-				<div className="text-center w-full mt-10 lg:mt-0">
-					<h1 className="text-sm lg:text-medium mb-1">Get in touch with us</h1>
-					<p className="text-smMobile md:text-sm text-secondaryDark mb-8 leading-[25px]">
+				<div className="text-center w-full ">
+					<h1 className="text-sm lg:text-medium mb-2 mt-4">
+						Get in touch with us
+					</h1>
+					<p className="text-smMobile md:text-sm text-secondaryDark mb-4 lg:mb-8 leading-[15px] lg:leading-[25px]">
 						Do you have questions or need assistance? Reach out to our team.
 					</p>
 				</div>
-				<div className="w-full mt-6">
+				<div className="w-full lg:mt-6">
 					<form
 						className="text-sm sm:text-sm md:text-md"
 						onSubmit={handleSubmit(onSubmit)}
@@ -73,10 +75,10 @@ const Modal = ({ handleClick }) => {
 						<h1 className="text-sm lg:text-medium text-start mb-2">
 							Enter your contact information
 						</h1>
-						<div className="w-full flex justify-between mb-2">
+						<div className="w-full flex justify-between mb-1 lg:mb-2">
 							<div className="w-[48%]">
 								<input
-									className={`w-full mb-2 bg-tertiaryLightDark placeholder-secondaryDark  p-5 rounded-[16px] outline-none text-secondaryDark  text-smMobile lg:text-sm ${
+									className={`w-full mb-1 lg:mb-2 bg-tertiaryLightDark placeholder-secondaryDark   p-4 lg:p-5 rounded-[16px] outline-none text-secondaryDark  text-smMobile lg:text-sm ${
 										errors.name ? 'border-red border-[1px]' : ''
 									}`}
 									type="text"
@@ -88,7 +90,7 @@ const Modal = ({ handleClick }) => {
 							</div>
 							<div className="w-[48%]">
 								<input
-									className={`w-full mb-2   bg-tertiaryLightDark placeholder-secondaryDark p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
+									className={`w-full mb-1 lg:mb-2   bg-tertiaryLightDark placeholder-secondaryDark  p-4 lg:p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
 										errors.lastName ? 'border-red border-[1px]' : ''
 									}`}
 									type="text"
@@ -97,9 +99,9 @@ const Modal = ({ handleClick }) => {
 								/>
 							</div>
 						</div>
-						<div className="w-full mb-2 text-center">
+						<div className="w-full mb-1 lg:mb-2 text-center">
 							<input
-								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-2 w-full p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
+								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-1 lg:mb-2 w-full  p-4 lg:p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
 									errors.subject ? 'border-red border-[1px]' : ''
 								}`}
 								type="text"
@@ -107,9 +109,9 @@ const Modal = ({ handleClick }) => {
 								{...register('subject', { required: true })}
 							/>
 						</div>
-						<div className="w-full mb-2 text-center">
+						<div className="w-full mb-1 lg:mb-2 text-center">
 							<input
-								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-2 w-full p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
+								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-1 lg:mb-2 w-full  p-4 lg:p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
 									errors.email ? ' border-red border-[1px]' : ''
 								}`}
 								type="email"
@@ -129,7 +131,7 @@ const Modal = ({ handleClick }) => {
 						</h1>
 						<div className="w-full mb-2 text-center">
 							<textarea
-								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-2 w-full p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
+								className={`  placeholder-secondaryDark bg-tertiaryLightDark mb-2 w-full  p-4 lg:p-5 rounded-[16px] outline-none text-secondaryDark font-light text-smMobile lg:text-sm ${
 									errors.message ? 'border-red border-[1px]' : ''
 								}`}
 								{...register('message', { required: true })}
@@ -141,14 +143,14 @@ const Modal = ({ handleClick }) => {
 						<div className="w-full justify-center items-center">
 							<button
 								type="submit"
-								className="mt-3 w-full rounded-[16px] text-smMobile lg:text-sm p-3 font-light text-dark border-tertiaryLighertDark bg-tertiaryLightDark hover:bg-blue hover:text-white duration-150"
+								className=" w-full rounded-[16px] text-smMobile lg:text-sm p-3 font-light text-dark border-tertiaryLighertDark bg-tertiaryLightDark hover:bg-blue hover:text-white duration-150"
 							>
 								Submit{' '}
 							</button>
 							<Link
 								href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER"
 								target="_blank"
-								className="text-whatsapp bg-white w-full flex justify-center align-middle mt-3  rounded-[16px] text-smMobile lg:text-sm p-3 font-light text-secondaryDark border-tertiaryLighertDark hover:bg-whatsapp hover:text-white duration-150"
+								className="text-whatsapp bg-white w-full flex justify-center align-middle mt-1  rounded-[16px] text-smMobile lg:text-sm p-3 font-light text-secondaryDark border-tertiaryLighertDark hover:bg-whatsapp hover:text-white duration-150"
 							>
 								{/* <div className="w-full"> */}
 								<AiOutlineWhatsApp className="mt-1 mr-2" />
@@ -157,7 +159,7 @@ const Modal = ({ handleClick }) => {
 							</Link>
 							<Link
 								href="/faq"
-								className="w-full flex justify-center align-middle mt-4 text-smMobile lg:text-sm text-blue"
+								className="w-full flex justify-center align-middle mt-1 text-smMobile lg:text-sm text-blue"
 								onClick={handleClick}
 							>
 								Read our FAQ

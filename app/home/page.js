@@ -183,24 +183,27 @@ const Page = () => {
 
 	return (
 		<>
-			<div className="pt-28  lg:pt-64 w-11/12 mx-auto h-fit lg:flex ">
+			<div className="pt-24  lg:pt-64 w-11/12 mx-auto h-fit lg:flex ">
 				<div className="lg:w-[65%] lg:shrink flex flex-col">
 					<div
 						style={acornLight.style}
-						className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] h-fit"
+						className="text-xxlMobile xl:text-xxl tracking-tight leading-[70px] xl:leading-[130px] h-fit"
 					>
 						Unlock elegance <br /> Through glass
 						<br />
 						and more
 					</div>
-					<div style={bogart.style} className="mt-10">
-						<p className="text-dark text-baseMobile lg:text-base">
+					<div
+						style={bogart.style}
+						className="leading-[20px] lg:leading-[35px] mt-4 lg:mt-10"
+					>
+						<p className="text-dark mt-10 lg:mt-0 text-baseMobile lg:text-base">
 							Seeking sleek and modern interior glass installations?
 						</p>
-						<p className="text-secondaryDark text-baseMobile lg:text-base">
+						<p className="text-secondaryDark hidden lg:inline text-baseMobile lg:text-base mt-4 lg:mt-0">
 							We provide free on-site quotes for your convenience.
 						</p>
-						<div className="flex flex-col lg:flex-row">
+						<div className="flex flex-col lg:flex-row leading-[15px] mt-2 lg:mt-0">
 							<p className="text-smallMobile lg:text-small text-secondaryDark">
 								Available in South Florida.
 							</p>
@@ -214,7 +217,7 @@ const Page = () => {
 					</div>
 					<div
 						style={bogart.style}
-						className="text-secondaryDark text-medium bg-tertiaryWhite w-fit px-6 py-3 rounded-lg mt-10 relative"
+						className="text-secondaryDark text-medium bg-tertiaryWhite w-fit px-6 py-3 rounded-lg mt-2 lg:mt-10 relative"
 					>
 						we craft your exact desires
 						<Image
@@ -237,7 +240,7 @@ const Page = () => {
 				className="bg-tertiaryWhite mt-60 lg:mt-28 w-full py-4 lg:p-20 rounded-[50px]"
 			>
 				<div className="w-11/12 mx-auto">
-					<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[90px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1 className="text-xlMobile xl:text-xxl tracking-tight leading-[40px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
 						We can take you from this...
 					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
@@ -254,7 +257,7 @@ const Page = () => {
 						className="ml-[35%] lg:ml-[45%] max-w-[69px] lg:max-w-[109px] my-16"
 					/>
 					<h1
-						className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12 "
+						className="text-xlMobile xl:text-xxl tracking-tight leading-[10px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12 "
 						style={acornLight.style}
 					>
 						To this!
@@ -296,7 +299,7 @@ const Page = () => {
 								href={'/gallery'}
 								className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark leading-[25px] hover:tracking-tight hover:text-blue transition-all duration-200"
 							>
-								Come see our projects in our gallery{' '}
+								Come see more projects in the gallery{' '}
 								<HiMiniArrowLongRight className="inline" />
 							</Link>
 						</div>
@@ -304,20 +307,20 @@ const Page = () => {
 							<Image src={GroupPeople} alt="GroupPeople" />
 						</div>
 					</div>
-					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative px-3 py-5 lg:px-11">
+					<div
+						onClick={handleModal}
+						className="min-h-[250px] hover:cursor-pointer hover:outline hover:outline-4 hover:outline-blue  lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative px-3 py-5 lg:px-11 duration-150"
+					>
 						<h1
 							className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] text-white"
 							style={bogartRegular.style}
 						>
 							Hablamos español
 						</h1>
-						<button
-							onClick={handleModal}
-							className="w-full items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryWhite mt-5 leading-[25px] hover:tracking-tight hover:text-cream transition-all duration-200"
-						>
+						<h1 className="w-full items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryWhite mt-5 leading-[25px]  transition-all duration-200">
 							Sientase libre de comunicarse <br /> con nosotros{' '}
-							<HiMiniArrowLongRight className="inline" />
-						</button>
+							{/* <HiMiniArrowLongRight className="inline" /> */}
+						</h1>
 						<Image
 							src={SpanishFlag}
 							alt="Little Spanish Flag"

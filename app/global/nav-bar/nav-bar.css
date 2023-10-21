@@ -13,7 +13,7 @@ body {
 
 :root {
   --bar-width: 40px;
-  --bar-height: 3px;
+  --bar-height: 1.5px;
   --hamburger-gap: 10px;
   --foreground: #333;
   --hamburger-margin: 8px;
