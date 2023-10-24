@@ -81,7 +81,7 @@ const Footer = () => {
 									currentRoute === `${link.url}`
 										? 'text-white'
 										: 'text-secondaryLightWhite'
-								} text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] lg:hover:text-secondaryLightWhite  duration-250`}
+								} text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] lg:hover:text-white  duration-250`}
 							>
 								{link.name}
 							</Link>
