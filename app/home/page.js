@@ -183,11 +183,11 @@ const Page = () => {
 
 	return (
 		<>
-			<div className="pt-24  lg:pt-64 w-11/12 mx-auto h-fit lg:flex ">
-				<div className="lg:w-[65%] lg:shrink flex flex-col">
+			<div className="pt-24  lg:pt-64 w-11/12 mx-auto h-fit lg:flex animate-[fadeIn_.5s_ease-in-out]">
+				<div className="lg:w-[65%] lg:shrink flex flex-col ">
 					<div
 						style={acornLight.style}
-						className="text-xxlMobile xl:text-xxl tracking-tight leading-[70px] xl:leading-[130px] h-fit"
+						className="text-xxlMobile xl:text-xxl tracking-tight leading-[70px] xl:leading-[130px] h-fit "
 					>
 						Unlock elegance <br /> Through glass
 						<br />

@@ -13,7 +13,7 @@ const page = () => {
 	return (
 		<div className="bg-cream w-full">
 			<div
-				className="w-full px-12 lg:w-7/12 mx-auto py-5 xl:py-32"
+				className="w-full px-12 lg:w-7/12 mx-auto py-5 xl:py-32 animate-[fadeIn_.5s_ease-in-out]"
 				style={acornLight.style}
 			>
 				<h1 className="text-lg lg:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark mt-12">

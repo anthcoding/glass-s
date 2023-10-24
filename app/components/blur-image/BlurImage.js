@@ -8,7 +8,7 @@ const BlurImage = ({ imgData }) => {
 		<div>
 			<Image
 				placeholder="blur"
-				className="h-auto max-w-full rounded-[52px] transition-all animate-[fadeIn_.2s_ease-in-out]"
+				className="h-auto max-w-full rounded-[52px]"
 				src={imgData.url}
 				alt={imgData.alt}
 			/>

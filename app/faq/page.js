@@ -12,7 +12,7 @@ const bogart = localFont({
 const Page = () => {
 	return (
 		<div
-			className="w-full lg:w-11/12 py-20 xl:py-32 px-5 lg:px-12  mx-auto"
+			className="w-full lg:w-11/12 py-20 xl:py-32 px-5 lg:px-12  mx-auto animate-[fadeIn_.5s_ease-in-out]"
 			style={acornLight.style}
 		>
 			<h1 className="xl:w-9/12 text-lg lg:text-xxl tracking-tight leading-10 lg:leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark ">

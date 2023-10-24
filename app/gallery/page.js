@@ -48,7 +48,7 @@ const data3 = [
 const Page = () => {
 	return (
 		<div
-			className="w-full mx-auto py-16 px-4 sm:py-24 sm:px-6"
+			className="w-full mx-auto py-16 px-4 sm:py-24 sm:px-6 animate-[fadeIn_.5s_ease-in-out]"
 			style={acornLight.style}
 		>
 			<h1 className="text-lg lg:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark lg:my-20">
