@@ -44,7 +44,7 @@ const Products = ({ products, right }) => {
 					<p className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-dark">
 						{activeButton.name}
 					</p>
-					<p className="items-center -mt-3 text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark">
+					<p className="items-center -mt-1 leading-5 text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark">
 						{activeButton.description}
 					</p>
 					<h1 className="text-smallMobile lg:text-small text-secondaryDark">

@@ -20,7 +20,7 @@ const page = () => {
 					Our <span className="text-dark">purpose</span>
 				</h1>
 				<p
-					className="text-secondaryDark text-center text-sm md:text-baseMobile lg:leading-[30px] lg:mt-20 mb-60"
+					className="text-secondaryDark text-center text-sm md:text-baseMobile lg:text-base lg:leading-[30px] lg:mt-20 mb-60"
 					style={bogart.style}
 				>
 					With over four years of dedicated experience, we are seasoned Glass
