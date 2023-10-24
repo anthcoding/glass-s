@@ -195,7 +195,7 @@ const Page = () => {
 					</div>
 					<div
 						style={bogart.style}
-						className="leading-[10px] lg:leading-[35px] mt-4 lg:mt-10"
+						className="leading-[20px] lg:leading-[35px] mt-4 lg:mt-10"
 					>
 						<p className="text-dark mt-10 lg:mt-0 text-baseMobile lg:text-base">
 							Seeking sleek and modern interior glass installations?

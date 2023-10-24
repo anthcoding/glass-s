@@ -77,7 +77,11 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
+								className={`${
+									currentRoute === `${link.url}`
+										? 'text-white'
+										: 'text-secondaryLightWhite'
+								} text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] lg:hover:text-secondaryLightWhite  duration-250`}
 							>
 								{link.name}
 							</Link>
