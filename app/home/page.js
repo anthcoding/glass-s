@@ -195,7 +195,7 @@ const Page = () => {
 					</div>
 					<div
 						style={bogart.style}
-						className="leading-[20px] lg:leading-[35px] mt-4 lg:mt-10"
+						className="leading-[10px] lg:leading-[35px] mt-4 lg:mt-10"
 					>
 						<p className="text-dark mt-10 lg:mt-0 text-baseMobile lg:text-base">
 							Seeking sleek and modern interior glass installations?
@@ -204,8 +204,8 @@ const Page = () => {
 							We provide free on-site quotes for your convenience.
 						</p>
 						<div className="flex flex-col lg:flex-row leading-[15px] mt-2 lg:mt-0">
-							<p className="text-smallMobile lg:text-small text-secondaryDark">
-								Available in South Florida.
+							<p className="hidden lg:inline text-smallMobile lg:text-small text-secondaryDark">
+								Based in South Florida.
 							</p>
 							<button
 								onClick={handleModal}
@@ -217,7 +217,7 @@ const Page = () => {
 					</div>
 					<div
 						style={bogart.style}
-						className="text-secondaryDark text-medium bg-tertiaryWhite w-fit px-6 py-3 rounded-lg mt-2 lg:mt-10 relative"
+						className="text-secondaryDark text-medium bg-tertiaryWhite w-fit px-6 py-3 rounded-lg mt-5 lg:mt-10 relative"
 					>
 						we craft your exact desires
 						<Image
@@ -240,7 +240,7 @@ const Page = () => {
 				className="bg-tertiaryWhite mt-60 lg:mt-28 w-full py-4 lg:p-20 rounded-[50px]"
 			>
 				<div className="w-11/12 mx-auto">
-					<h1 className="text-xlMobile xl:text-xxl tracking-tight leading-[40px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
+					<h1 className="text-lg xl:text-xxl tracking-tight leading-[40px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12">
 						We can take you from this...
 					</h1>
 					<div className="w-full lg:w-9/12 bg-dark mx-auto rounded-[50px] mt-16 relative">
@@ -257,7 +257,7 @@ const Page = () => {
 						className="ml-[35%] lg:ml-[45%] max-w-[69px] lg:max-w-[109px] my-16"
 					/>
 					<h1
-						className="text-xlMobile xl:text-xxl tracking-tight leading-[10px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12 "
+						className="text-lg xl:text-xxl tracking-tight leading-[10px] xl:leading-[130px] lg:w-[60%] mx-auto text-center text-secondaryDark mt-12 "
 						style={acornLight.style}
 					>
 						To this!
@@ -284,12 +284,12 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<div style={bogart.style} className="w-8/12 mx-auto pt-32 lg:py-80">
-				<div className="w-full grid grid-cols-1 lg:grid-cols-3 gap-4">
+			<div style={bogart.style} className="w-8/12 mx-auto py-32 lg:py-80">
+				<div className="w-full flex flex-col xl:grid xl:grid-cols-3 gap-4">
 					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col gap-5 lg:gap-0 lg:flex-row justify-center items-center gradient-bg-first px-3 py-5 lg:px-11">
-						<div className="w-full lg:w-2/3 ">
+						<div className="w-full lg:w-2/3 p-5 ">
 							<h1
-								className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] mb-5 pr-8"
+								className="text-xlMobile md:text-xl xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] mb-5 pr-8"
 								style={bogartRegular.style}
 							>
 								We have exceeded expectations for{' '}
@@ -309,10 +309,10 @@ const Page = () => {
 					</div>
 					<div
 						onClick={handleModal}
-						className="min-h-[250px] hover:cursor-pointer hover:outline hover:outline-4 hover:outline-blue  lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative px-3 py-5 lg:px-11 duration-150"
+						className="min-h-[250px]  hover:cursor-pointer hover:outline hover:outline-4 hover:outline-blue  lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative p-5 lg:px-11 duration-150"
 					>
 						<h1
-							className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] text-white"
+							className="text-xlMobile md:text-xl xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] text-white"
 							style={bogartRegular.style}
 						>
 							Hablamos español
@@ -327,14 +327,14 @@ const Page = () => {
 							className="absolute right-5 bottom-5 h-[50px] w-[50px]"
 						/>
 					</div>
-					<div className="h-[250px] lg:h-[337px] rounded-xl flex flex-col overflow-hidden relative">
+					<div className="h-[250px] lg:h-[337px] rounded-xl flex flex-col overflow-hidden relative p-5">
 						<Image
 							src={Reglas}
 							alt="Ruler Photo"
-							className="object-contain absolute bottom-0 "
+							className="object-contain absolute bottom-0 left-0"
 						/>
 						<h1
-							className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl  text-white z-20 absolute px-3 py-5 lg:p-11 leading-[30px] md:leading-[40px] lg:leading-[50px]"
+							className="text-start text-xlMobile md:text-xl xl:text-xl  text-white z-20  px-3 py-5 lg:p-11 leading-[30px] md:leading-[40px] lg:leading-[50px]"
 							style={bogartRegular.style}
 						>
 							Get a free quote in less than{' '}
@@ -343,7 +343,7 @@ const Page = () => {
 					</div>
 					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col justify-center items-center gradient-bg-second px-3 py-5 lg:px-11">
 						<h1
-							className="text-xlMobile md:text-xl lg:text-xlMobile xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] "
+							className="text-xlMobile md:text-xl xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] "
 							style={bogartRegular.style}
 						>
 							Experience unbeatable value with the perfect blend of quality and
@@ -361,7 +361,7 @@ const Page = () => {
 				<div className="w-10/12 mx-auto">
 					<p
 						style={acornLight.style}
-						className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center lg:text-start text-dark mt-12 mb-20 lg:mb-40 "
+						className="text-xl leading-[50px] lg:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center lg:text-start text-dark mb-20 lg:mb-40 "
 					>
 						Take a look <br /> at what we do
 					</p>
@@ -373,7 +373,7 @@ const Page = () => {
 			<div className="w-10/12 lg:w-9/12 mx-auto my-40 xl:my-80">
 				<p
 					style={acornLight.style}
-					className="text-xl leading-[50px] xl:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-20 lg:mb-40"
+					className="text-xl leading-[50px] lg:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-20 lg:mb-40"
 				>
 					Check what our customers say about us
 				</p>

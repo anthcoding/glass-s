@@ -5,6 +5,7 @@ import './nav-bar.css';
 import React, { useState, useContext } from 'react';
 import localFont from '@next/font/local';
 import ContactContext from '../../store/contact-context';
+import { usePathname } from 'next/navigation';
 
 const bogart = localFont({
 	src: '../../assets/bogart/Bogart-Light-trial.ttf',
@@ -25,6 +26,8 @@ const NavBar = () => {
 		setIsChecked(!isChecked); // Toggle the checked state
 	};
 
+	const currentRoute = usePathname();
+
 	return (
 		<>
 			<div
@@ -37,18 +40,20 @@ const NavBar = () => {
 					</div>
 					<div className="px-5 py-2 hidden md:flex justify-center bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10">
 						<ul className="flex gap-8">
-							<li>
-								<Link href="/home">Home</Link>
-							</li>
-							<li>
-								<Link href="/about">About</Link>
-							</li>
-							<li>
-								<Link href="/gallery">Gallery</Link>
-							</li>
-							<li>
-								<Link href="/faq">FAQ</Link>
-							</li>
+							{NavLinks.map((link) => (
+								<li key={link.name}>
+									<Link
+										className={`${
+											currentRoute === `${link.url}`
+												? 'text-dark'
+												: 'text-tertiaryDark'
+										}`}
+										href={link.url}
+									>
+										{link.name}
+									</Link>
+								</li>
+							))}
 						</ul>
 					</div>
 					<div className="ml-auto md:ml-0">
@@ -74,7 +79,11 @@ const NavBar = () => {
 						{NavLinks.map((value) => (
 							<Link
 								style={bogart.style}
-								className="nav-link text-center text-dark border-b-[.3px] w-full"
+								className={`${
+									currentRoute === `${value.url}`
+										? 'text-dark'
+										: 'text-secondaryDark'
+								} nav-link text-center text-dark border-b-[.3px] border-secondaryDark w-full `}
 								key={value.name}
 								href={value.url}
 								onClick={handleCheckboxChange}

@@ -77,7 +77,7 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
+								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
@@ -85,7 +85,7 @@ const Footer = () => {
 					})}
 				</div>
 				<div className="flex flex-col">
-					<h1 className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[25px] lg:pl-[35%] ">
+					<h1 className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[35%] ">
 						Social
 					</h1>
 					{SocialLinks.map((link) => {
@@ -93,7 +93,7 @@ const Footer = () => {
 							<Link
 								key={link.url}
 								href={link.url}
-								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
+								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>

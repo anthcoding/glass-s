@@ -16,7 +16,7 @@ const Testimonial = ({ data, goNext, goPrev }) => {
 
 	return (
 		<div className="w-full mx-auto relative" style={bogart.style}>
-			<div className="max-w-[260px] mx-auto flex">
+			<div className="max-w-[250px] h-auto mx-auto flex">
 				<Image
 					src={data.img}
 					alt={data.name}

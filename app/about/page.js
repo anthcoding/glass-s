@@ -13,14 +13,14 @@ const page = () => {
 	return (
 		<div className="bg-cream w-full">
 			<div
-				className="w-full px-12 lg:w-7/12 mx-auto py-32"
+				className="w-full px-12 lg:w-7/12 mx-auto py-5 xl:py-32"
 				style={acornLight.style}
 			>
-				<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark mt-12">
+				<h1 className="text-lg lg:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark mt-12">
 					Our <span className="text-dark">purpose</span>
 				</h1>
 				<p
-					className="text-secondaryDark text-center text-baseMobile lg:text-base leading-[30px] mt-20 mb-60"
+					className="text-secondaryDark text-center text-sm md:text-baseMobile lg:leading-[30px] lg:mt-20 mb-60"
 					style={bogart.style}
 				>
 					With over four years of dedicated experience, we are seasoned Glass

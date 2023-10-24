@@ -51,7 +51,7 @@ const Page = () => {
 			className="w-full mx-auto py-16 px-4 sm:py-24 sm:px-6"
 			style={acornLight.style}
 		>
-			<h1 className="text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark pt-12 mb-20">
+			<h1 className="text-lg lg:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark lg:my-20">
 				Gallery
 			</h1>
 

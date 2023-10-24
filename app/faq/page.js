@@ -12,23 +12,26 @@ const bogart = localFont({
 const Page = () => {
 	return (
 		<div
-			className="w-full lg:w-11/12 py-32 px-12  mx-auto"
+			className="w-full lg:w-11/12 py-20 xl:py-32 px-5 lg:px-12  mx-auto"
 			style={acornLight.style}
 		>
-			<h1 className="xl:w-9/12 text-xxlMobile xl:text-xxl tracking-tight leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark pt-">
+			<h1 className="xl:w-9/12 text-lg lg:text-xxl tracking-tight leading-10 lg:leading-[80px] xl:leading-[130px] mx-auto text-center text-secondaryDark ">
 				Frequently asked questions
 			</h1>
-			<div className="my-20 lg:w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
+			<div
+				className="my-10 lg:my-20 w-full lg:w-9/12 mx-auto"
+				style={bogart.style}
+			>
+				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					Do we offer warranty?
 				</div>
-				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
+				<div className="text-secondaryDark text-sm lg:text-baseMobile rounded-[52px] bg-cream px-10 py-5 xl:w-2/4 mx-auto leading-[1]">
 					At Stock Source, we are committed to ensuring your satisfaction an the
 					longevity of our products. That is why we offer a comprehensive
 					warranty to provide you with peace of mind.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Hardware Warranty
 					</span>{' '}
 					<br />
@@ -41,7 +44,7 @@ const Page = () => {
 					conditions.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Installation Warranty
 					</span>{' '}
 					<br />
@@ -54,11 +57,11 @@ const Page = () => {
 					installation, our team will be there to make it right.
 				</div>
 			</div>
-			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
+			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					What area do we serve?
 				</div>
-				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
+				<div className="text-secondaryDark text-sm lg:text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-full xl:w-2/4 mx-auto leading-[1]">
 					Our service area extends from the stunning Florida Keys up to the
 					vibrant West Palm region. We are dedicated to serving the communities
 					within this expansive stretch, ensuring everyone in this area has
@@ -73,13 +76,13 @@ const Page = () => {
 					prioritizing exceptional results and customer satisfaction.
 				</div>
 			</div>
-			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
+			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					How is the order process?
 				</div>
-				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
-					<span className="text-base" style={acornLight.style}>
-						1:
+				<div className="text-secondaryDark text-sm lg:text-baseMobile rounded-[52px] bg-cream px-10 py-5 xl:w-2/4 mx-auto leading-[1]">
+					<span className="text-medium lg:text-base" style={acornLight.style}>
+						1.
 					</span>{' '}
 					Estimation and Precise Measurements We begin the order process by
 					providing an estimate for your project. Our team will visit your
@@ -87,8 +90,8 @@ const Page = () => {
 					mirror is customized to fit your exact specifications.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
-						2:
+					<span className="text-medium lg:text-base" style={acornLight.style}>
+						2.
 					</span>{' '}
 					Order Placement Once you have approved the project and the estimate,
 					we proceed to place the order for the glass or mirror. This step
@@ -96,8 +99,8 @@ const Page = () => {
 					options to meet your specific needs.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
-						3:
+					<span className="text-medium lg:text-base" style={acornLight.style}>
+						3.
 					</span>{' '}
 					Glass Production After the order is placed, we work with our trusted
 					suppliers to procure the glass. Our commitment to quality means that
@@ -105,8 +108,8 @@ const Page = () => {
 					satisfaction.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
-						4:
+					<span className="text-medium lg:text-base" style={acornLight.style}>
+						4.
 					</span>{' '}
 					Installation On a scheduled date, our skilled installation team will
 					arrive at your location to complete the installation. We take pride in
@@ -116,39 +119,39 @@ const Page = () => {
 					<br />
 				</div>
 			</div>
-			<div className="my-20 w-9/12 mx-auto" style={bogart.style}>
-				<div className="text-white text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit ml-20">
+			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					Payment methods
 				</div>
-				<div className="text-secondaryDark text-baseMobile rounded-[52px] bg-cream px-10 py-5 w-2/4 mx-auto leading-[1]">
-					<span className="text-base" style={acornLight.style}>
+				<div className="text-secondaryDark text-sm lg:text-baseMobile rounded-[52px] bg-cream px-10 py-5 xl:w-2/4 mx-auto leading-[1]">
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						We offer a variety of convenient payment methods to accommodate your
 						preferences:
 					</span>{' '}
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Cash:
 					</span>{' '}
 					For those who prefer the simplicity of cash transactions, we gladly
 					accept cash payments.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Check:
 					</span>{' '}
 					You can also choose to pay by check, providing a traditional and
 					secure payment option.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Zelle:
 					</span>{' '}
 					We offer the convenience of Zelle for quick and hassle-free electronic
 					payments.
 					<br />
 					<br />
-					<span className="text-base" style={acornLight.style}>
+					<span className="text-medium lg:text-base" style={acornLight.style}>
 						Credit or Debit Card:
 					</span>{' '}
 					To ensure flexibility, we accept credit and debit card payments,
