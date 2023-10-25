@@ -294,7 +294,7 @@ const Page = () => {
 								style={bogartRegular.style}
 							>
 								We have exceeded expectations for{' '}
-								<span style={acornLight.style}>200+</span> clients.
+								<span style={acornLight.style}>350+</span> clients.
 							</h1>
 							<Link
 								href={'/gallery'}

@@ -148,7 +148,7 @@ const Modal = ({ handleClick }) => {
 								Submit{' '}
 							</button>
 							<Link
-								href="https://api.whatsapp.com/send?phone=YOUR_PHONE_NUMBER"
+								href="https://wa.me/message/YVKF72Z5H4TLM1?src=qr"
 								target="_blank"
 								className="text-whatsapp bg-white w-full flex justify-center align-middle mt-1  rounded-[16px] text-smMobile lg:text-sm p-3 font-light text-secondaryDark border-tertiaryLighertDark hover:bg-whatsapp hover:text-white duration-150"
 							>

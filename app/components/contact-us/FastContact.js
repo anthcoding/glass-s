@@ -67,7 +67,7 @@ const FastContactModal = ({ handleClick }) => {
 						Do you have questions or need assistance? Reach out to our team.
 					</p>
 
-					<Link href="tel:786-290-5299">Give us a call</Link>
+					<Link href="tel:786-794-6229">Give us a call</Link>
 					<Link
 						target="_blank"
 						href="https://calendly.com/stocksourceglass/free-estimate?month=2023-10"
