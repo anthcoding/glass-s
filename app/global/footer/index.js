@@ -122,8 +122,8 @@ const Footer = () => {
 			</div>
 			<div className="lg:w-7/12 mx-auto flex items-center justify-center mt-8 lg:mt-16 pb-9">
 				<p className="text-smMobile lg:text-smallMobile lg:text-small text-secondaryLightWhite  bottom-3 mr-2">
-					©<span style={acorn.style}>{currentTime.getFullYear()} </span>Stock
-					Source Glass Solutions{' '}
+					©<span style={acorn.style}>{currentTime.getFullYear()} </span>
+					StockSource Glass Solutions Inc{' '}
 				</p>
 				<span className="text-smMobile lg:text-smallMobile lg:text-small text-white mr-1">
 					{' '}

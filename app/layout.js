@@ -9,7 +9,7 @@ import { ModalProvider } from './store/contact-context';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-	title: 'Stock Source Glass Solutions',
+	title: 'StockSource Glass Solutions Inc',
 	description: 'Stock Source Glass Solutions Website. Shower Doors.',
 };
 

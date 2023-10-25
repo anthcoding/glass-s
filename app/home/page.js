@@ -43,7 +43,7 @@ const FIRST_PRODUCTS_DATA = [
 		name: 'Frameless Shower Door',
 		buttonName: 'F-shower door',
 		description: 'Swing door + fixed panel',
-		price: '$850',
+		price: '$650',
 		img: FramelessDoor,
 	},
 	{
@@ -51,7 +51,7 @@ const FIRST_PRODUCTS_DATA = [
 		name: 'Fixed Panel',
 		buttonName: 'Fixed pannel',
 		description: 'Fixed panel',
-		price: '$500',
+		price: '$450',
 		img: FixedPanel,
 	},
 	{
@@ -59,15 +59,15 @@ const FIRST_PRODUCTS_DATA = [
 		name: 'Frameless Shower Enclosure',
 		buttonName: 'F-shower encl',
 		description: 'Fixed panels + door',
-		price: '$1200',
+		price: '$950',
 		img: FramelessDoorEnclosure,
 	},
 	{
 		id: 4,
 		name: 'Frameless Sliding Shower Door',
 		buttonName: 'FS-shower door',
-		description: 'Fixed panel + door + four rolling system tubular',
-		price: '$1250',
+		description: 'Fixed panel + door + four rolling system',
+		price: '$950',
 		img: SlidingDoor,
 	},
 ];
@@ -78,7 +78,7 @@ const SECOND_PRODUCTS_DATA = [
 		name: 'Glass Railing',
 		buttonName: 'G-railing',
 		description: 'Glass railing with standoff',
-		price: '$3500',
+		price: '$2500',
 		img: StairRailing,
 	},
 	{
@@ -86,7 +86,7 @@ const SECOND_PRODUCTS_DATA = [
 		name: 'Interior Pivot Door',
 		buttonName: 'I-pivot-door',
 		description: 'Interior door (frosted glass)',
-		price: '$900',
+		price: '$600',
 		img: PivotDoor,
 	},
 	{
@@ -94,7 +94,7 @@ const SECOND_PRODUCTS_DATA = [
 		name: 'Mirror',
 		buttonName: 'Mirror',
 		description: 'Mirror one-quarter',
-		price: '$300',
+		price: '$180',
 		img: Mirror,
 	},
 	{
@@ -102,7 +102,7 @@ const SECOND_PRODUCTS_DATA = [
 		name: 'Pivor Heavy Duty Glass Enclosure',
 		buttonName: 'P-HD-glass',
 		description: 'One-half clear glass with hydraulic hinges',
-		price: '$2189',
+		price: '$1500',
 		img: PivotDoorHd,
 	},
 ];
