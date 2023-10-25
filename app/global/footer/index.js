@@ -25,16 +25,19 @@ const NavLinks = [
 ];
 
 const SocialLinks = [
-	{ name: 'Instagram', url: '/instagram' },
-	{ name: 'Facebook', url: '/facebook' },
-	{ name: 'Tiktok', url: '/tittok' },
+	{ name: 'Instagram', url: 'https://www.instagram.com/ss.glass.inc/' },
+	{
+		name: 'Facebook',
+		url: 'https://www.facebook.com/stocksourceglasssolutions/',
+	},
+	{ name: 'Tiktok', url: 'https://www.tiktok.com/@ss.glass.inc' },
 ];
 
 const Footer = () => {
 	var currentTime = new Date();
 	const currentRoute = usePathname();
 
-	const { handleModal } = useContext(ContactContext);
+	const { handleContactModal } = useContext(ContactContext);
 
 	return (
 		<div className="p-2 w-full h-full relative" style={bogart.style}>
@@ -62,7 +65,7 @@ const Footer = () => {
 					Not in South Florida?
 				</p>
 				<button
-					onClick={handleModal}
+					onClick={handleContactModal}
 					style={bogart.style}
 					className="bg-blue rounded-[62px] text-white text-sm px-5 py-2"
 				>
@@ -81,7 +84,7 @@ const Footer = () => {
 									currentRoute === `${link.url}`
 										? 'text-white'
 										: 'text-secondaryLightWhite'
-								} text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[50%] lg:hover:text-white  duration-250`}
+								} text-lgMobile md:text-xlMobile lg:text-xl text-center lg:text-start leading-[25px] md:leading-[55px] lg:pl-[50%] lg:hover:text-white  duration-250`}
 							>
 								{link.name}
 							</Link>
@@ -89,15 +92,16 @@ const Footer = () => {
 					})}
 				</div>
 				<div className="flex flex-col">
-					<h1 className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[35%] ">
+					<h1 className="text-lgMobile md:text-xlMobile lg:text-xl text-secondaryLightWhite  text-center lg:text-start leading-[25px] md:leading-[55px] lg:pl-[35%] ">
 						Social
 					</h1>
 					{SocialLinks.map((link) => {
 						return (
 							<Link
+								target="_blank"
 								key={link.url}
 								href={link.url}
-								className="text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-white text-center lg:text-start leading-[25px] lg:leading-[55px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
+								className="text-lgMobile md:text-xlMobile lg:text-xl text-white text-center lg:text-start leading-[25px] md:leading-[55px] lg:pl-[35%] hover:text-secondaryLightWhite  duration-250"
 							>
 								{link.name}
 							</Link>
@@ -105,11 +109,11 @@ const Footer = () => {
 					})}
 				</div>
 				<div className="col-span-2 xl:col-auto flex flex-col justify-center items-center">
-					<h1 className="mt-8 xl:mt-0 text-lgMobile md:text-xl lg:text-xlMobile xl:text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
+					<h1 className="mt-8 xl:mt-0 text-lgMobile md:text-xlMobile lg:text-xl text-secondaryLightWhite leading-[45px] xl:pl-[15%] mb-4">
 						Any questions?
 					</h1>
 					<button
-						onClick={handleModal}
+						onClick={handleContactModal}
 						className="xl:ml-[15%] max-w-[250px]  lg:max-w-[350px] bg-[#ffffff26]  text-white w-[85%] py-4 rounded-lg hover:bg-lightDark border-[1px] border-[#ffffff26] duration-200"
 					>
 						Contact us
@@ -118,12 +122,12 @@ const Footer = () => {
 			</div>
 			<div className="lg:w-7/12 mx-auto flex items-center justify-center mt-8 lg:mt-16 pb-9">
 				<p className="text-smMobile lg:text-smallMobile lg:text-small text-secondaryLightWhite  bottom-3 mr-2">
-					©<span style={acorn.style}>{currentTime.getFullYear()} </span>Glass
-					Stock Solutions.{' '}
+					©<span style={acorn.style}>{currentTime.getFullYear()} </span>Stock
+					Source Glass Solutions{' '}
 				</p>
-				<span className="text-smMobile lg:text-smallMobile lg:text-small text-white mr-2">
+				<span className="text-smMobile lg:text-smallMobile lg:text-small text-white mr-1">
 					{' '}
-					Designed and developed by:
+					Made by:
 				</span>
 				<Link
 					target="_blank"

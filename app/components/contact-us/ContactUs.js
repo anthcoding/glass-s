@@ -49,7 +49,7 @@ const Modal = ({ handleClick }) => {
 	return (
 		<>
 			<div
-				className="absolute inset-0 bg-secondaryDark bg-opacity-20 transition-all animate-[fadeIn_.1s_ease-in-out]"
+				className="absolute inset-0 z-20 bg-secondaryDark bg-opacity-20 transition-all animate-[fadeIn_.1s_ease-in-out]"
 				onClick={handleClick}
 			></div>
 			<div className="fixed w-[90%] md:w-[580px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg bg-white rounded-[51px] p-5 lg:p-16 z-[1000] transition-all animate-[fadeIn_.2s_ease-in-out]">
@@ -173,10 +173,11 @@ const Modal = ({ handleClick }) => {
 };
 
 const ContactUs = () => {
-	const { isOpen, handleModal } = useContext(ContactContext);
-	console.log(isOpen, handleModal);
+	const { isContactOpen, handleContactModal } = useContext(ContactContext);
 
-	return <>{isOpen ? <Modal handleClick={handleModal} /> : null}</>;
+	return (
+		<>{isContactOpen ? <Modal handleClick={handleContactModal} /> : null}</>
+	);
 };
 
 export default ContactUs;

@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import localFont from '@next/font/local';
 import GroupButtons from './GroupButtons';
 
@@ -25,14 +25,14 @@ const Products = ({ products, right }) => {
 
 	return (
 		<div
-			className="xl:flex w-10/12 mx-auto mb-8 xl:mt-20 xl:mb-80 "
+			className="xl:flex w-10/12 mx-auto mb-8 xl:mt-20 xl:mb-80"
 			style={bogart.style}
 		>
 			<div
-				className={`${right ? 'xl:order-last' : ''} max-h-[1060px] xl:w-3/4`}
+				className={`${right ? 'xl:order-last' : ''} max-h-[1060px] xl:w-3/4  `}
 			>
 				<Image
-					className="rounded-[50px] max-h-[1060px] shadow-xl transition-all duration-250 focus:animate-[fadeIn_.5s_ease-in-out] "
+					className="rounded-[50px] max-h-[1060px] shadow-xl "
 					alt={activeButton.name}
 					src={activeButton.img}
 					placeholder="blur"

@@ -161,7 +161,8 @@ const bogartRegular = localFont({
 const Page = () => {
 	const [testimonialIndex, setTestimonialIndex] = useState(0);
 
-	const { handleModal } = useContext(ContactContext);
+	const { handleContactModal, handleFastContactModal } =
+		useContext(ContactContext);
 
 	const prevTestimonialHandler = () => {
 		if (testimonialIndex === 0) {
@@ -208,7 +209,7 @@ const Page = () => {
 								Based in South Florida.
 							</p>
 							<button
-								onClick={handleModal}
+								onClick={handleContactModal}
 								className="lg:ml-3 text-blue flex lg:justify-center items-center z-[5px] hover:tracking-tight transition-all duration-200"
 							>
 								Tell us where to go next <HiMiniArrowLongRight />
@@ -308,7 +309,7 @@ const Page = () => {
 						</div>
 					</div>
 					<div
-						onClick={handleModal}
+						onClick={handleContactModal}
 						className="min-h-[250px]  hover:cursor-pointer hover:outline hover:outline-4 hover:outline-blue  lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative p-5 lg:px-11 duration-150"
 					>
 						<h1
@@ -327,7 +328,10 @@ const Page = () => {
 							className="absolute right-5 bottom-5 h-[50px] w-[50px]"
 						/>
 					</div>
-					<div className="h-[250px] lg:h-[337px] rounded-xl flex flex-col overflow-hidden relative p-5">
+					<div
+						onClick={handleFastContactModal}
+						className="animate-pulse hover:animate-none h-[250px] lg:h-[337px] rounded-xl flex flex-col overflow-hidden relative p-5 hover:outline  hover:outline-4 hover:outline-blue  hover:cursor-pointer"
+					>
 						<Image
 							src={Reglas}
 							alt="Ruler Photo"

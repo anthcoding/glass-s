@@ -6,6 +6,9 @@ import React, { useState, useContext } from 'react';
 import localFont from '@next/font/local';
 import ContactContext from '../../store/contact-context';
 import { usePathname } from 'next/navigation';
+import Image from 'next/image';
+
+import BlackLogo from '../../assets/images/stocksourceBlackLogo.png';
 
 const bogart = localFont({
 	src: '../../assets/bogart/Bogart-Light-trial.ttf',
@@ -20,7 +23,7 @@ const NavLinks = [
 
 const NavBar = () => {
 	const [isChecked, setIsChecked] = useState(false);
-	const { handleModal } = useContext(ContactContext);
+	const { handleContactModal } = useContext(ContactContext);
 
 	const handleCheckboxChange = () => {
 		setIsChecked(!isChecked); // Toggle the checked state
@@ -36,7 +39,9 @@ const NavBar = () => {
 			>
 				<div className="flex justify-between items-center">
 					<div className="text-[30px] hidden md:block">
-						<Link href="/home">glassss</Link>
+						<Link href="/home">
+							<Image className="h-12 w-12" alt="Company Logo" src={BlackLogo} />
+						</Link>
 					</div>
 					<div className="px-5 py-2 hidden md:flex justify-center bg-gray-400 rounded-lg bg-clip-padding backdrop-filter backdrop-blur-md bg-opacity-10">
 						<ul className="flex gap-8">
@@ -58,7 +63,7 @@ const NavBar = () => {
 					</div>
 					<div className="ml-auto md:ml-0">
 						<button
-							onClick={handleModal}
+							onClick={handleContactModal}
 							className="bg-blue rounded-[62px] text-white text-sm px-5 py-2"
 						>
 							Contact us
@@ -92,8 +97,8 @@ const NavBar = () => {
 							</Link>
 						))}
 					</ul>
-					<div className="w-full text-center text-[20px] text-secondaryDark">
-						glassss
+					<div className="w-full flex justify-center align-center text-[20px] text-secondaryDark mb-12">
+						<Image className="h-12 w-12" alt="Company Logo" src={BlackLogo} />
 					</div>
 				</aside>
 			</div>
