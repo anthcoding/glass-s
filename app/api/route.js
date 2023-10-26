@@ -26,7 +26,7 @@ const generateEmailContent = (data) => {
 	};
 };
 
-const handler = async (req, res) => {
+export const handler = async (req, res) => {
 	if (req.method === 'POST') {
 		const data = req.body;
 		if (
@@ -55,4 +55,3 @@ const handler = async (req, res) => {
 	}
 	return res.status(400).json({ message: 'Bad request' });
 };
-export default handler;
