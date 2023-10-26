@@ -8,6 +8,7 @@ import { useForm } from 'react-hook-form';
 import { AiOutlineWhatsApp } from 'react-icons/ai';
 import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
+import { sendContactForm } from '../../lib/api';
 
 const bogart = localFont({
 	src: '../../assets/bogart/Bogart-Light-trial.ttf',

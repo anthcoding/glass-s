@@ -356,7 +356,7 @@ const Page = () => {
 						<p className="items-center text-start text-smallMobile md:text-lgMobile lg:text-medium text-secondaryDark mt-5 leading-[25px]">
 							Extensive selection of products, including shower doors, office
 							dividers, stairs railings, and more, starting at just{' '}
-							<span style={acornLight.style}>$350.</span>
+							<span style={acornLight.style}>$180.</span>
 						</p>
 					</div>
 				</div>

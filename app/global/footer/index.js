@@ -57,7 +57,7 @@ const Footer = () => {
 					Based in South Florida
 					<br />
 					<span className=" text-secondaryLightWhite ">
-						Starting at: <span style={acorn.style}>$350</span>
+						Starting at: <span style={acorn.style}>$180</span>
 					</span>
 				</h1>
 

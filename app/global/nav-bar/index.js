@@ -8,7 +8,10 @@ import ContactContext from '../../store/contact-context';
 import { usePathname } from 'next/navigation';
 import Image from 'next/image';
 
-import BlackLogo from '../../assets/images/stocksourceBlackLogo.png';
+import BlackLogo from '../../assets/images/stocksourceBlackLogo.svg';
+import { AiOutlineInstagram } from 'react-icons/ai';
+import { BsFacebook } from 'react-icons/bs';
+import { PiTiktokLogo } from 'react-icons/pi';
 
 const bogart = localFont({
 	src: '../../assets/bogart/Bogart-Light-trial.ttf',
@@ -38,7 +41,7 @@ const NavBar = () => {
 				className="fixed w-11/12 pt-5 left-0 right-0 mx-auto z-20"
 			>
 				<div className="flex justify-between items-center">
-					<div className="text-[30px] hidden md:block">
+					<div className="text-[30px] md:block">
 						<Link href="/home">
 							<Image className="h-12 w-12" alt="Company Logo" src={BlackLogo} />
 						</Link>
@@ -61,7 +64,7 @@ const NavBar = () => {
 							))}
 						</ul>
 					</div>
-					<div className="ml-auto md:ml-0">
+					<div className="ml-auto hidden md:block md:ml-0">
 						<button
 							onClick={handleContactModal}
 							className="bg-blue rounded-[62px] text-white text-sm px-5 py-2"
@@ -97,8 +100,22 @@ const NavBar = () => {
 							</Link>
 						))}
 					</ul>
-					<div className="w-full flex justify-center align-center text-[20px] text-secondaryDark mb-12">
-						<Image className="h-12 w-12" alt="Company Logo" src={BlackLogo} />
+					<div className="w-full flex gap-7 justify-center align-center text-[20px] text-secondaryDark mb-32">
+						<Link
+							target="_blank"
+							href="https://www.instagram.com/ss.glass.inc/"
+						>
+							<AiOutlineInstagram className="text-base" />
+						</Link>
+						<Link
+							target="_blank"
+							href="https://www.facebook.com/stocksourceglasssolutions/"
+						>
+							<BsFacebook className="text-base" />
+						</Link>
+						<Link target="_blank" href="https://www.tiktok.com/@ss.glass.inc">
+							<PiTiktokLogo className="text-base" />
+						</Link>
 					</div>
 				</aside>
 			</div>

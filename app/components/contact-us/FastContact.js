@@ -5,7 +5,8 @@ import ContactContext from '../../store/contact-context';
 import { VscClose } from 'react-icons/vsc';
 import localFont from '@next/font/local';
 import { useForm } from 'react-hook-form';
-import { AiOutlineWhatsApp } from 'react-icons/ai';
+import { TbPhone } from 'react-icons/tb';
+import { AiOutlineSchedule } from 'react-icons/ai';
 import Link from 'next/link';
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -59,20 +60,41 @@ const FastContactModal = ({ handleClick }) => {
 				>
 					<VscClose size={30} />
 				</button>
-				<div className="text-center w-full ">
-					<h1 className="text-sm lg:text-medium mb-2 mt-4">
-						Get in touch with us
-					</h1>
+				<div className="text-center w-full">
+					<h1 className="text-sm lg:text-medium mb-2 mt-4">Need assistance?</h1>
 					<p className="text-smMobile md:text-sm text-secondaryDark mb-4 lg:mb-8 leading-[15px] lg:leading-[25px]">
-						Do you have questions or need assistance? Reach out to our team.
+						Feel free to give us a call or schedule an appointment with our
+						team.
 					</p>
 
-					<Link href="tel:786-794-6229">Give us a call</Link>
+					<div className="flex flex-col">
+						<Link
+							href="tel:786-794-6229"
+							className="text-dark bg-tertiaryLightDark text-start shadow-sm hover:opacity-75 p-4 lg:p-5 rounded-[16px] w-full flex justify-center align-middle mt-1 text-smMobile lg:text-sm font-light text-secondaryDark border-tertiaryLighertDark duration-150"
+						>
+							{/* <div className="w-full"> */}
+							<TbPhone className="mt-1 mr-4 text-blue text-base" />
+							Give us a call at (+1 786-794-6229). Available 24/7 every business
+							day.
+							{/* </div> */}
+						</Link>
+
+						<Link
+							className="text-dark bg-tertiaryLightDark text-start shadow-sm hover:opacity-75 p-4 lg:p-5 rounded-[16px] w-full flex justify-center align-middle mt-3 text-smMobile lg:text-sm font-light text-secondaryDark border-tertiaryLighertDark duration-150"
+							target="_blank"
+							href="https://calendly.com/stocksourceglass/free-estimate?month=2023-10"
+						>
+							<AiOutlineSchedule className="mt-1 mr-4 text-xlMobile text-blue" />
+							Planning ahead for a discussion? You can easily schedule a call
+							with us at your preferred time.
+						</Link>
+					</div>
 					<Link
-						target="_blank"
-						href="https://calendly.com/stocksourceglass/free-estimate?month=2023-10"
+						href="/faq"
+						className="w-full flex justify-center align-middle mt-12 text-smMobile lg:text-sm text-blue"
+						onClick={handleClick}
 					>
-						Sechedulle
+						Read our FAQ
 					</Link>
 				</div>
 			</div>
