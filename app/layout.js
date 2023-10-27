@@ -6,6 +6,7 @@ import ContactUs from './components/contact-us/ContactUs';
 import FastContact from './components/contact-us/FastContact';
 import { ModalProvider } from './store/contact-context';
 import { Toaster } from 'react-hot-toast';
+import Head from 'next/head';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,6 +18,12 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
+			<Head>
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
+				/>
+			</Head>
 			<ModalProvider>
 				<body
 					className={`${inter.className} relative`}
