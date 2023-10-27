@@ -17,8 +17,6 @@ const Products = ({ products, right }) => {
 	const initialActiveButton = products.length > 0 ? products[0] : null;
 	const [activeButton, setActiveButton] = useState(initialActiveButton);
 
-	const myImage = useRef();
-
 	const handleButtonClick = (value) => {
 		setActiveButton(value);
 	};
@@ -28,16 +26,19 @@ const Products = ({ products, right }) => {
 			className="xl:flex w-10/12 mx-auto mb-8 xl:mt-20 xl:mb-80"
 			style={bogart.style}
 		>
-			<div
-				className={`${right ? 'xl:order-last' : ''} max-h-[1060px] xl:w-3/4  `}
-			>
-				<Image
-					className="rounded-[50px] max-h-[1060px] shadow-xl "
-					alt={activeButton.name}
-					src={activeButton.img}
-					placeholder="blur"
-					ref={myImage}
-				/>
+			<div className={`${right ? 'xl:order-last' : ''} flex w-full xl:w-3/4`}>
+				{products.map((value) => (
+					<Image
+						key={value.id}
+						src={value.img}
+						alt={value.description}
+						className={`${
+							activeButton.id === value.id
+								? 'opacity-1 w-full'
+								: 'opacity-0 w-0'
+						} max-h-[1080px] transition-opacity duration-[.5s] rounded-[50px] block`}
+					/>
+				))}
 			</div>
 			<div className="mt-10 mb-20 xl:w-1/4 lg:px-5 relative">
 				<div className={`${right ? 'xl:absolute xl:bottom-0' : ''}`}>

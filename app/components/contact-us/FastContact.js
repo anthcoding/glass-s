@@ -85,8 +85,8 @@ const FastContactModal = ({ handleClick }) => {
 							href="https://calendly.com/stocksourceglass/free-estimate?month=2023-10"
 						>
 							<AiOutlineSchedule className="mt-1 mr-4 text-xlMobile text-blue" />
-							Planning ahead for a discussion? You can easily schedule a call
-							with us at your preferred time.
+							Planning ahead for a discussion? You can easily schedule a visit
+							for a free estimate.
 						</Link>
 					</div>
 					<Link
