@@ -36,7 +36,7 @@ const Products = ({ products, right }) => {
 							activeButton.id === value.id
 								? 'opacity-1 w-full'
 								: 'opacity-0 w-0'
-						} max-h-[1080px] transition-opacity duration-[.5s] rounded-[50px] block`}
+						} max-h-[1080px] transition-opacity ease-in-out duration-[.7s] rounded-[50px] block`}
 					/>
 				))}
 			</div>
