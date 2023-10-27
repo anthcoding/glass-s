@@ -5,6 +5,7 @@ import Footer from './global/footer';
 import ContactUs from './components/contact-us/ContactUs';
 import FastContact from './components/contact-us/FastContact';
 import { ModalProvider } from './store/contact-context';
+import { Toaster } from 'react-hot-toast';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
 					className={`${inter.className} relative`}
 					suppressHydrationWarning={true}
 				>
+					<Toaster position="bottom-center" reverseOrder={false} />
 					<NavBar />
 					{children}
 					<Footer />

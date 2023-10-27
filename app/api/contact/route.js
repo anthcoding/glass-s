@@ -1,6 +1,5 @@
-'use strict';
-
-import { mailOptions, transporter } from '../config/nodemailer';
+import { NextResponse } from 'next/server';
+import { mailOptions, transporter } from '../../config/nodemailer';
 
 const CONTACT_MESSAGE_FIELDS = {
 	name: 'Name',
@@ -26,8 +25,8 @@ const generateEmailContent = (data) => {
 	};
 };
 
-export async function POST(req, res) {
-	const data = req.body;
+export async function POST(request) {
+	const data = await request.json();
 	if (
 		!data ||
 		!data.name ||
@@ -36,19 +35,17 @@ export async function POST(req, res) {
 		!data.subject ||
 		!data.message
 	) {
-		return res.status(400).send({ message: 'Bad request' });
+		return new Response('Bad email', { status: 400 });
 	}
-
 	try {
 		await transporter.sendMail({
 			...mailOptions,
 			...generateEmailContent(data),
 			subject: data.subject,
 		});
-
-		return res.status(200).json({ success: true });
+		return new Response('Good email', { status: 200 });
 	} catch (err) {
 		console.log(err);
-		return res.status(400).json({ message: err.message });
+		return new Response('Bad email', { status: 400 });
 	}
 }

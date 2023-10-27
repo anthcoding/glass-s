@@ -212,7 +212,7 @@ const Page = () => {
 								onClick={handleContactModal}
 								className="lg:ml-3 text-blue flex lg:justify-center items-center z-[5px] hover:tracking-tight transition-all duration-200"
 							>
-								Tell us where to go next <HiMiniArrowLongRight />
+								Let’s discuss your project <HiMiniArrowLongRight />
 							</button>
 						</div>
 					</div>
