@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google';
 import NavBar from './global/nav-bar/index';
 import Footer from './global/footer';
 import ContactUs from './components/contact-us/ContactUs';
+import ContactUsEsp from './components/contact-us/ContactUsEsp';
 import FastContact from './components/contact-us/FastContact';
 import { ModalProvider } from './store/contact-context';
 import { Toaster } from 'react-hot-toast';
@@ -13,6 +14,11 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata = {
 	title: 'StockSource Glass Solutions Inc',
 	description: 'Stock Source Glass Solutions Website. Shower Doors.',
+	icons: {
+		icon: ['/favicon.ico?-v4'],
+		apple: ['/apple-touch-icon.png?-v4'],
+		shortcut: ['/apple-touch-icon.png'],
+	},
 };
 
 export default function RootLayout({ children }) {
@@ -34,6 +40,7 @@ export default function RootLayout({ children }) {
 					{children}
 					<Footer />
 					<ContactUs />
+					<ContactUsEsp />
 					<FastContact />
 				</body>
 			</ModalProvider>

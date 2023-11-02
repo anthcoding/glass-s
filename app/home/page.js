@@ -35,7 +35,6 @@ import { GiRoundStar } from 'react-icons/gi';
 
 import Products from '../components/products/Products';
 import Testimonial from '../components/testimonial/Testimonial';
-import Footer from '../global/footer/index';
 
 const FIRST_PRODUCTS_DATA = [
 	{
@@ -161,7 +160,7 @@ const bogartRegular = localFont({
 const Page = () => {
 	const [testimonialIndex, setTestimonialIndex] = useState(0);
 
-	const { handleContactModal, handleFastContactModal } =
+	const { handleContactModal, handleFastContactModal, handleContactModalEsp } =
 		useContext(ContactContext);
 
 	const prevTestimonialHandler = () => {
@@ -309,7 +308,7 @@ const Page = () => {
 						</div>
 					</div>
 					<div
-						onClick={handleContactModal}
+						onClick={handleContactModalEsp}
 						className="min-h-[250px]  hover:cursor-pointer hover:outline hover:outline-4 hover:outline-blue  lg:min-h-[337px] rounded-xl bg-dark flex flex-col xl:justify-center relative p-5 lg:px-11 duration-150"
 					>
 						<h1
