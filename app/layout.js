@@ -32,7 +32,7 @@ export default function RootLayout({ children }) {
 			</Head>
 			<ModalProvider>
 				<body
-					className={`${inter.className} relative`}
+					className={`${inter.className} relative overflow-auto`}
 					suppressHydrationWarning={true}
 				>
 					<Toaster position="bottom-center" reverseOrder={false} />
