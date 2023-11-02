@@ -53,7 +53,7 @@ const Modal = ({ handleClick }) => {
 				className="absolute inset-0 z-20 bg-secondaryDark bg-opacity-20 transition-all animate-[fadeIn_.1s_ease-in-out]"
 				onClick={handleClick}
 			></div>
-			<div className="fixed w-[90%] md:w-[580px] lg:max-h-[789px] lg:overflow-y-scroll xl:max-h-[1579px] xl:overflow-visible top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg bg-white rounded-[51px] p-5 lg:p-16 z-[1000] transition-all animate-[fadeIn_.2s_ease-in-out]">
+			<div className="fixed w-[90%] md:w-[580px] top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 shadow-lg bg-white rounded-[51px] p-5 lg:px-16 lg:py-6 z-[1000] transition-all animate-[fadeIn_.2s_ease-in-out]">
 				<button
 					onClick={handleClick}
 					className="bg-white absolute top-5 right-8"
@@ -61,9 +61,7 @@ const Modal = ({ handleClick }) => {
 					<VscClose size={30} />
 				</button>
 				<div className="text-center w-full ">
-					<h1 className="text-sm lg:text-medium mb-2 mt-4">
-						Póngase en contacto
-					</h1>
+					<h1 className="text-sm lg:text-medium mb-2 ">Póngase en contacto</h1>
 					<p className="text-smMobile md:text-sm text-secondaryDark mb-4 lg:mb-8 leading-[15px] lg:leading-[25px]">
 						¿Tiene preguntas o necesita ayuda? Comuníquese con nuestro equipo
 					</p>
