@@ -19,7 +19,7 @@ const Page = () => {
 				Frequently asked questions
 			</h1>
 			<div
-				className="my-10 lg:my-20 w-full lg:w-9/12 mx-auto"
+				className="w-full mx-auto my-10 lg:my-20 lg:w-9/12"
 				style={bogart.style}
 			>
 				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
@@ -57,7 +57,7 @@ const Page = () => {
 					installation, our team will be there to make it right.
 				</div>
 			</div>
-			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+			<div className="w-full mx-auto my-20 lg:w-9/12" style={bogart.style}>
 				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					What area do we serve?
 				</div>
@@ -76,7 +76,7 @@ const Page = () => {
 					prioritizing exceptional results and customer satisfaction.
 				</div>
 			</div>
-			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+			<div className="w-full mx-auto my-20 lg:w-9/12" style={bogart.style}>
 				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					How is the order process?
 				</div>
@@ -119,7 +119,7 @@ const Page = () => {
 					<br />
 				</div>
 			</div>
-			<div className="my-20 w-full lg:w-9/12 mx-auto" style={bogart.style}>
+			<div className="w-full mx-auto my-20 lg:w-9/12" style={bogart.style}>
 				<div className="text-white text-medium lg:text-base rounded-[52px] bg-[#0000004d] px-10 py-4 w-fit lg:ml-20">
 					Payment methods
 				</div>

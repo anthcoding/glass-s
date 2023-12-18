@@ -183,11 +183,11 @@ const Page = () => {
 
 	return (
 		<>
-			<div className="pt-24  lg:pt-64 w-11/12 mx-auto h-fit lg:flex animate-[fadeIn_.5s_ease-in-out]">
+			<div className="pt-24 lg:py-40 w-11/12 mx-auto h-fit lg:flex animate-[fadeIn_.5s_ease-in-out]">
 				<div className="lg:w-[65%] lg:shrink flex flex-col ">
 					<div
 						style={acornLight.style}
-						className="text-xxlMobile xl:text-xxl tracking-tight leading-[70px] xl:leading-[150px] h-fit "
+						className="text-xxlMobile xl:text-xxl tracking-tight leading-[70px] xl:leading-[120px] xxl:leading-[150px] h-fit "
 					>
 						Unlock elegance <br /> Through glass
 						<br />
@@ -197,10 +197,10 @@ const Page = () => {
 						style={bogart.style}
 						className="leading-[20px] lg:leading-[35px] mt-4 lg:mt-10"
 					>
-						<p className="text-dark mt-10 lg:mt-0 text-baseMobile lg:text-base">
+						<p className="mt-10 text-dark lg:mt-0 text-baseMobile lg:text-base">
 							Seeking sleek and modern interior glass installations?
 						</p>
-						<p className="text-secondaryDark hidden lg:inline text-baseMobile lg:text-base mt-4 lg:mt-0">
+						<p className="hidden mt-4 text-secondaryDark lg:inline text-baseMobile lg:text-base lg:mt-0">
 							We provide free on-site quotes for your convenience.
 						</p>
 						<div className="flex flex-col lg:flex-row leading-[15px] mt-2 lg:mt-0">
@@ -217,7 +217,7 @@ const Page = () => {
 					</div>
 					<div
 						style={bogart.style}
-						className="text-secondaryDark text-medium bg-tertiaryWhite w-fit px-6 py-3 rounded-lg mt-5 lg:mt-10 relative"
+						className="relative px-6 py-3 mt-5 rounded-lg text-secondaryDark text-medium bg-tertiaryWhite w-fit lg:mt-10"
 					>
 						we craft your exact desires
 						<Image
@@ -284,10 +284,10 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<div style={bogart.style} className="w-8/12 mx-auto py-32 lg:py-80">
-				<div className="w-full flex flex-col xl:grid xl:grid-cols-3 gap-4">
+			<div style={bogart.style} className="w-8/12 py-32 mx-auto lg:py-80">
+				<div className="flex flex-col w-full gap-4 xl:grid xl:grid-cols-3">
 					<div className="min-h-[250px] lg:min-h-[337px] rounded-xl lg:col-span-2 flex flex-col gap-5 lg:gap-0 lg:flex-row justify-center items-center gradient-bg-first px-3 py-5 lg:px-11">
-						<div className="w-full lg:w-2/3 p-5 ">
+						<div className="w-full p-5 lg:w-2/3 ">
 							<h1
 								className="text-xlMobile md:text-xl xl:text-xl leading-[30px] md:leading-[40px] lg:leading-[50px] mb-5 pr-8"
 								style={bogartRegular.style}
@@ -334,7 +334,7 @@ const Page = () => {
 						<Image
 							src={Reglas}
 							alt="Ruler Photo"
-							className="object-contain absolute bottom-0 left-0"
+							className="absolute bottom-0 left-0 object-contain"
 						/>
 						<h1
 							className="text-start text-xlMobile md:text-xl xl:text-xl  text-white z-20  px-3 py-5 lg:p-11 leading-[30px] md:leading-[40px] lg:leading-[50px]"
@@ -360,7 +360,7 @@ const Page = () => {
 					</div>
 				</div>
 			</div>
-			<div className="bg-cream pt-32 pb-4">
+			<div className="pt-32 pb-4 bg-cream">
 				<div className="w-10/12 mx-auto">
 					<p
 						style={acornLight.style}
@@ -373,7 +373,7 @@ const Page = () => {
 				<Products products={FIRST_PRODUCTS_DATA} right />
 			</div>
 
-			<div className="w-10/12 lg:w-9/12 mx-auto my-40 xl:my-80">
+			<div className="w-10/12 mx-auto my-40 lg:w-9/12 xl:my-80">
 				<p
 					style={acornLight.style}
 					className="text-xl leading-[50px] lg:text-xxl tracking-tight lg:leading-[80px] xl:leading-[130px] xl:w-full mx-auto text-center text-dark mt-12 mb-20 lg:mb-40"
